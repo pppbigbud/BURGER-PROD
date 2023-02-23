@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}🍔 BURGERS 🍔{% endblock %}
+
+{% block main %}
+    <div class="container d-flex flex-column">
+
+        <div class="responsiveDnone">
+            <div class="alignementBackground">
+                <div class="titreBurgerAlignement w-100">
+                    <h1 class="titreBurger text-white">BURGERS</h1>
+                    <h3 class="text-muted text-center txtRespBurger">Retrouvez ici l'ensemble de nos Burgers fait minute et maison avec des produits selectionnés avec soin avec leurs pains fait maison. A déguster sans modération .</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-center">
+
+            {% for burger in burgers %}
+                {% include('partials/_cardsBurger.html.twig') %}
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+    <script>
+        // Au chargement de la page je charge ma fonction
+        window.addEventListener('load', () => {
+            setUpClickEventAddItem();
+        });
+
+        //fonctions quand je clic
+        function setUpClickEventAddItem() {
+            //Écoute element grace à un data-attribute
+            //(et par sécurité pour éviter les injections)
+            let addToCartBTN = document.querySelectorAll('[data-add-burger-cart]');
+            //Boucle sur le tableau data-attribute
+            addToCartBTN.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const burgerId = btn.getAttribute('data-add-burger-cart');
+                    const isChecked = document.querySelector("[data-add-frie='" + burgerId + "']").checked;
+
+                    const data = {
+                        burgerId,
+                        'fries': isChecked,
+                    };
+
+                    flasher.success("Votre Burger à bien été ajouté!")
+
+                    fetch('/addBurgerToCart/' + JSON.stringify(data))
+                        .then((response) => {
+                            return response.json();
+                        })
+                        .then(res => {
+                            const burgerCart = document.querySelector("[data-cart-burger]");
+
+                            const newQty = parseInt(res.newQty);
+                            burgerCart.classList.toggle('d-none', newQty === 0);
+
+                            const rondQtyBurger = burgerCart.querySelector('.rondPriceBurger');
+                            rondQtyBurger.innerText = newQty;
+                        })
+                })
+            })
+        }
+    </script>
+
+{% endblock %}

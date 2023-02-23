@@ -1,0 +1,23 @@
+{#{% extends 'base.html.twig' %}#}
+
+{#{% block title %}New Drink{% endblock %}#}
+
+{#{% block main %}#}
+{#    <h1>Change les ingrédients de tes Tacos</h1>#}
+
+{#    {{ include('admin/tacos/_form.html.twig') }}#}
+
+{#{% endblock %}#}
+
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Burger{% endblock %}
+
+{% block main %}
+    <h1>Modifier Supprimer un Ingrédient</h1>
+
+    {{ include('admin/tacos/_form.html.twig', {'button_label': 'Modifier'}) }}
+    {{ include('admin/tacos/_delete_form.html.twig') }}
+
+{% endblock %}

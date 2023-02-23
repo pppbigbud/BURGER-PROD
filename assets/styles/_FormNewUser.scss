@@ -1,0 +1,121 @@
+.titleForm {
+  margin: 10px;
+}
+
+.globalRegisterLogin{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.containerUserForm {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  .rowUserForm {
+    position: relative;
+    width: 50%;
+    height: auto;
+    padding: 50px;
+    z-index: 2;
+
+    .fondUserForm {
+      padding: 20px 10px 20px 10px;
+      background-color: hsl(0, 0%, 21%);
+      border-radius: 10px;
+      box-shadow: inset 0 0 0.5px 1px hsla(0, 0%,
+              100%, 0.075),
+        /* shadow ring 👇 */
+      0 0 0 1px hsla(0, 0%, 0%, 0.05),
+        /* multiple soft shadows 👇 */
+      0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+      0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
+      0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+    }
+  }
+}
+
+.blocFormBtnValidationUser {
+  position: absolute;
+  top: 68%;
+  left: 30%;
+  width: 50%;
+  height: 24%;
+  z-index: -1;
+
+  .btn {
+    color: white;
+    width: 70%;
+    height: 100px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: hsl(120, 100%, 25%);
+    border-color: #009955;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0.5px 1px hsla(0, 0%,
+            100%, 0.075),
+      /* shadow ring 👇 */
+    0 0 0 1px hsla(0, 0%, 0%, 0.05),
+      /* multiple soft shadows 👇 */
+    0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+    0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
+    0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+  }
+}
+
+.spaceRowForm {
+  margin: 10px;
+}
+
+.accordCGV {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  .form-check {
+    margin-right: 1vw;
+  }
+}
+
+.positionRondForm {
+  width: 100%;
+  height: 5vh;
+  position: relative;
+
+  .rondFond .ConnexionLogoAdmin {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: hsl(0, 0%, 21%);
+    box-shadow: inset 0 0 0.5px 1px hsla(0, 0%,
+            100%, 0.075),
+      /* shadow ring 👇 */
+    0 0 0 1px hsla(0, 0%, 0%, 0.05),
+      /* multiple soft shadows 👇 */
+    0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+    0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
+    0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+    z-index: 3;
+  }
+}
+
+.separateurContainer{
+  width: 10px;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background: rgb(255,255,255);
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+  opacity: 0.1;
+}

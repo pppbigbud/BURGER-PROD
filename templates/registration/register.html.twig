@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}S'enregistrer{% endblock %}
+
+{% block main %}
+    <h1 class="titleForm">Vous devez créer un compte <br>
+        afin de commander</h1>
+
+    <div class="containerUserForm ">
+
+        <div class="rowUserForm">
+            {{ form_start(registrationForm) }}
+            <div class="fondUserForm">
+
+                <div class="spaceRowForm">
+                    {{ form_row(registrationForm.email) }}
+                    {{ form_row(registrationForm.plainPassword, {
+                        label: 'Mot de Passe'
+                    }) }}
+                </div>
+                <div class="accordCGV">
+                    {{ form_row(registrationForm.agreeTerms, {
+                        label: 'Je suis en accord avec les CGV'
+                    }) }}
+                </div>
+            </div>
+            <div class="blocFormBtnValidationUser">
+                <button type="submit" class="btn">S'enregistrer</button>
+            </div>
+            {{ form_end(registrationForm) }}
+        </div>
+    </div>
+
+{% endblock %}

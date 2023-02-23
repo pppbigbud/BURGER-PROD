@@ -1,0 +1,119 @@
+.containerAdminDrink {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  .rowAdminDrink {
+    position: relative;
+    width: 70%;
+    height: auto;
+    padding: 50px;
+    z-index: 2;
+
+    .fondFormDrinkSize {
+      padding: 20px 10px 20px 10px;
+      background-color: hsl(0, 0%, 21%);
+      border-radius: 10px;
+      box-shadow: inset 0 0 0.5px 1px hsla(0, 0%,
+              100%, 0.075),
+        /* shadow ring 👇 */
+      0 0 0 1px hsla(0, 0%, 0%, 0.05),
+        /* multiple soft shadows 👇 */
+      0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+      0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
+      0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+    }
+  }
+}
+
+.blocFormBtnValidationDrink {
+  position: absolute;
+  top: 72%;
+  left: 10%;
+  width: 50%;
+  height: 24%;
+  z-index: -1;
+
+  .btn {
+    width: 70%;
+    height: 100px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: hsl(120, 100%, 25%);
+    border-color: #009955;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0.5px 1px hsla(0, 0%,
+            100%, 0.075),
+      /* shadow ring 👇 */
+    0 0 0 1px hsla(0, 0%, 0%, 0.05),
+      /* multiple soft shadows 👇 */
+    0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+    0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
+    0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+  }
+}
+
+
+.blocFormBtnRetourDrink {
+  position: absolute;
+  top: 77%;
+  left: 55%;
+  width: 50%;
+  height: 24%;
+  z-index: -1;
+
+  .btn {
+    width: 70%;
+    height: 100px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: hsl(27, 100%, 50%);
+    border-color: #ff9400;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0.5px 1px hsla(0, 0%,
+            100%, 0.075),
+      /* shadow ring 👇 */
+    0 0 0 1px hsla(0, 0%, 0%, 0.05),
+      /* multiple soft shadows 👇 */
+    0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+    0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
+    0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+  }
+
+  a {
+    color: white;
+  }
+}
+
+
+.alignFormImg {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    font-size: 2em;
+  }
+}
+
+.spaceRowForm {
+  margin: 10px;
+}
+
+@media (orientation: portrait) {
+  .containerAdminDrink {
+    flex-direction: column;
+    align-items: center;
+
+    .rowAdminDrink {
+      width: 70%;
+      height: auto;
+
+    }
+  }
+}

@@ -1,0 +1,238 @@
+{% extends 'base.html.twig' %}
+
+    {% block title %}Panier{% endblock %}
+
+    {% block main %}
+
+        {#           --------------------------------------------------------- CART BURGER -------------------------------------------------------                 #}
+        <div class="containerCart">
+
+            <div class="cardCartBack margeBoxCart">
+
+                {% if itemsBurger | length > 0 %}
+
+                <div class="containerTitreBurger"><p class="titreCartArticle">Vos Burgers</p></div>
+
+                <div class="d-flex justify-content-center align-items-center flex-column p-2 backgroundCart">
+
+                    <table class="table align-middle mb-0 text-white">
+                        <thead class="text-white">
+                        <tr>
+                            <th>Produit</th>
+                            <th>Description</th>
+                            <th>Prix</th>
+                            <th>Quantité</th>
+                            <th>Frites</th>
+                            <th>
+                                <div class="d-flex justify-content-center align-content-center">
+                                    Supprimer
+                                </div>
+                            </th>
+
+                        </tr>
+                        </thead>
+
+                        {% for item in itemsBurger %}
+                        <tbody>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <img src="{{ asset( 'build/images/burger/') ~ item.burger.imagePath }}"
+                                         alt=""
+                                         style="width: 45px; height: 45px"
+                                         class="rounded-circle"
+                                    />
+                                    <div class="ms-3">
+                                        <p class="fw-bold mb-1">{{ item.burger.name }}</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <p class="fw-normal mb-1">{{ item.burger.description }}</p>
+                            </td>
+                            <td>{{ item.burger.price }} €</td>
+                            <td>{{ item.quantity.qty }}</td>
+                            <td>{{ item.quantity.nbFries }}</td>
+
+                            <td>
+                                <div class="d-flex justify-content-center align-content-center">
+                                    <a href="{{ path('cart_remove_burger', {'id': item.burger.id}) }}">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </a>
+                                </div>
+                            </td>
+
+                        </tr>
+
+
+                        {% endfor %}
+
+                        </tbody>
+                    </table>
+
+                    <div class="containerTotalBurger"><p class="totalCartArticle">{{ totalBurger }} €</p></div>
+
+                    {% endif %}
+
+                </div>
+            </div>
+            {#           --------------------------------------------------------- CART TACOS -------------------------------------------------------                 #}
+            <div class="cardCartBack margeBoxCart">
+
+                {% if itemsTacos | length > 0 %}
+
+                <div class="containerTitreBurger"><p class="titreCartArticle">Vos Tacos</p></div>
+
+                <div class=" d-flex justify-content-center align-items-center flex-column p-2 backgroundCart">
+
+
+                    <table class="table align-middle mb-0 text-white">
+                        <thead class="text-white">
+                        <tr>
+                            <th>
+                                <img src="{{ asset( 'build/images/tacosSize.png') }}"
+                                     alt=""
+                                     style="width: 45px; height: 45px"
+                                     class=""/>
+                                Taille
+                            </th>
+
+                            <th>
+                                <img src="{{ asset( 'build/images/tacosMeat.png') }}"
+                                     alt=""
+                                     style="width: 95px; height: 52px"
+                                     class=""/>
+                                Viande
+                            </th>
+                            <th>
+                                <img src="{{ asset( 'build/images/cheeseTacosConfig.png') }}"
+                                     alt=""
+                                     style="width: 65px; height: 65px"
+                                     class=""/>
+                                Fromage
+                            </th>
+                            <th>
+                                <img src="{{ asset( 'build/images/sauceTacos.png') }}"
+                                     alt=""
+                                     style="width: 55px; height: 55px"
+                                     class=""/>
+                                Sauce
+                            </th>
+                            <th>Prix</th>
+                            <th>
+                                <div class="d-flex justify-content-center align-content-center">
+                                    Supprimer
+                                </div>
+                            </th>
+
+                        </tr>
+                        </thead>
+
+                        {% for item in itemsTacos %}
+                            <tbody>
+                            <tr>
+                                {#                            <div class="fw-normal mb-1"> #}
+                                <td>{{ item.tacos.size.name }}</td>
+                                {#                            </div> #}
+                                <td>{{ item.tacos.meat.name }}</td>
+                                <td>{{ item.tacos.cheese.name }}</td>
+                                <td>{{ item.tacos.sauce.name }}</td>
+                                <td>{{ (item.tacos.size.price) + (item.tacos.meat.price) }} €</td>
+                                <td>
+                                    <div class="d-flex justify-content-center align-content-center">
+                                        <a href="{{ path('cart_remove_tacos', {'id': item.tacos.id}) }}">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        {% endfor %}
+
+                    </table>
+
+                    <div class="containerTotalBurger"><p class="totalCartArticle">{{ totalTacos }} €</p></div>
+
+                    {% endif %}
+
+                </div>
+            </div>
+
+            {#           --------------------------------------------------------- CART DRINK et FRITES-------------------------------------------------------                 #}
+
+            <div class="cardCartBack margeBoxCart ">
+
+                {% if itemsDrink | length > 0 %}
+
+                <div class="containerTitreBurger"><p class="titreCartArticle">Vos Boissons</p></div>
+
+                <div class="d-flex justify-content-center align-items-center flex-column p-2 backgroundCart">
+
+
+                    <table class=" table align-middle mb-0 text-white">
+                        <thead class="text-white">
+                        <tr>
+                            <th>Produit</th>
+                            <th>Nom</th>
+                            <th>Taille</th>
+                            <th>Prix</th>
+                            <th>
+                                <div class="d-flex justify-content-center align-content-center">
+                                    Supprimer
+                                </div>
+                            </th>
+                        </tr>
+                        </thead>
+
+                        {% for item in itemsDrink %}
+                            <tbody>
+                            <tr>
+                                <td><img src="{{ asset( 'build/images/drink/') ~ item.drink.imagePath }}"
+                                         alt=""
+                                         style="width: 45px; height: 45px"
+                                         class="rounded-circle"
+                                    /></td>
+                                <td>{{ item.drink.name }}</td>
+                                <td>{{ item.drink.size }}</td>
+                                <td>{{ (item.drink.price) }} €</td>
+                                <td>
+                                    <div class="d-flex justify-content-center align-content-center">
+                                        <a href="{{ path('cart_remove_drink', {'id': item.drink.id}) }}">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        {% endfor %}
+
+                    </table>
+
+                    <div class="containerTotalBurger"><p class="totalCartArticle">{{ totalDrink }} €</p></div>
+
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+{#        {% if itemsTotal > 0 %}#}
+
+{#            <div class="containerTotalCart">#}
+{#                <img class="orderValidationImg" src="{{ asset( 'build/images/validationOrder.png') }}"#}
+{#                     alt="Ordervalidation">#}
+
+{#                <div class="totalCart">#}
+{#                    <p>Commander pour :</p>#}
+{#                    <br>#}
+{#                    <p>{{ itemsTotal }} €</p>#}
+{#                </div>#}
+{#            </div>#}
+
+{#        {% endif %}#}
+
+        <script>
+            console.log(sessionStorage.getItem("Burger"));
+        </script>
+
+    {% endblock %}
+

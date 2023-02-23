@@ -1,0 +1,87 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block main %}
+
+    <div class="grid-wrapper">
+        <div class="grid" data-text="BURGER">
+            <div class="grid__item item-hero">
+                <img src="{{ asset('build/images/cheesburger.png') }}" alt="">
+            </div>
+            <div class="grid__item item-detail">
+                <h1 class="title">Passe prendre <br> un Burger !</h1>
+                <p class="description">Tous nos Burgers sont préparés avec des produits locaux et des pains fait
+                    maison</p>
+            </div>
+            <div class="grid__item item-info">
+                <div class="info">
+                    <span class="value">150<small>gr</small></span>
+                    <span class="name">Steak Pure Boeuf</span>
+                </div>
+                <div class="info">
+                    <span class="value">France <small>&#127467;&#127479;</small></span>
+                    <span class="name">Viande Origine</span>
+                </div>
+                <div class="info">
+                    <span class="value">10<small>€</small></span>
+                    <span class="name">Prix (hors frites)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="grid-wrapper">
+        <div class="grid" data-text="TACOS">
+            <div class="grid__item item-hero">
+                <img src="{{ asset('build/images/tacos.png') }}" alt="">
+            </div>
+            <div class="grid__item item-detail">
+                <h1 class="title">Ou sinon on fait<br>aussi des Tacos !</h1>
+                <p class="description">Tacos réalisés avec amour et préparés avec que de bons produits</p>
+            </div>
+            <div class="grid__item item-info">
+                <div class="info">
+                    <span class="value">150<small>gr</small></span>
+                    <span class="name">Steak Pure Boeuf</span>
+                </div>
+                <div class="info">
+                    <span class="value">France <small>&#127467;&#127479;</small></span>
+                    <span class="name">Viande Origine</span>
+                </div>
+                <div class="info">
+                    <span class="value">10<small>€</small></span>
+                    <span class="name">Prix (hors frites)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-wrapper">
+        <div class="grid" data-text="FRITES">
+            <div class="grid__item item-hero">
+                <img src="{{ asset('build/images/VisuelBoissonEtFrites.png') }}" alt="">
+            </div>
+            <div class="grid__item item-detail">
+                <h1 class="title">Et des Frites <br> et Boissons !</h1>
+                <p class="description">Frites 100% maison et boissons sans alcool.</p>
+            </div>
+            <div class="grid__item item-info">
+                <div class="info">
+                    <span class="value">150<small>gr</small></span>
+                    <span class="name">Steak Pure Boeuf</span>
+                </div>
+                <div class="info">
+                    <span class="value">France <small>&#127467;&#127479;</small></span>
+                    <span class="name">Viande Origine</span>
+                </div>
+                <div class="info">
+                    <span class="value">10<small>€</small></span>
+                    <span class="name">Prix (hors frites)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

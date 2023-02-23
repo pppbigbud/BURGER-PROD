@@ -1,0 +1,136 @@
+html,
+body {
+  font-family: "Coolvetica Compressed Hv", sans-serif;
+  color: var(--text-color);
+}
+
+h2 {
+  font-family: "Comica Brush", sans-serif;
+  font-weight: lighter;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--text-color);
+
+  &:hover {
+    color: var(--text-color);
+  }
+}
+
+.testCACA {
+  width: 100% !important;
+  height: 20vh !important;
+  background-color: yellow !important;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(
+                  45deg,
+                  hsl(0deg 0% 12%) 0%,
+                  hsl(344deg 0% 13%) 28%,
+                  hsl(344deg 0% 14%) 40%,
+                  hsl(344deg 0% 15%) 49%,
+                  hsl(344deg 0% 16%) 55%,
+                  hsl(344deg 0% 17%) 62%,
+                  hsl(344deg 0% 18%) 68%,
+                  hsl(344deg 0% 19%) 76%,
+                  hsl(344deg 0% 20%) 86%,
+                  hsl(0deg 0% 21%) 100%
+  );
+}
+
+main {
+  flex-grow: 1;
+  padding: 1rem;
+}
+
+.box-shadow {
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.3);
+}
+
+.border-radius {
+  border-radius: 1rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.text-gold {
+  color: var(--gold-color);
+}
+
+.text-silver {
+  color: var(--silver-color);
+}
+
+.text-bronze {
+  color: var(--bronze-color);
+}
+
+.form-control {
+  background-color: var(--main-color-dark);
+  color: var(--text-color);
+  border: 0;
+  height: 40px;
+  border-radius: 0.5rem;
+
+  &:focus,
+  &:active {
+    background-color: var(--main-color-dark);
+    box-shadow: none;
+    color: var(--text-color);
+  }
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.form-check-input:checked {
+  background-color: var(--main-color-dark);
+  border-color: var(--main-color-dark);
+}
+
+.form-check-input:focus {
+  border-color: var(--main-color-dark);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.25);
+}
+
+.solid-btn {
+  padding: 0.35rem 2.3rem;
+  color: var(--main-color);
+  background-color: var(--text-color);
+  border-radius: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 1px solid var(--text-color);
+  text-decoration: none;
+
+  &:hover {
+    background-color: var(--silver-color);
+    border-color: var(--silver-color);
+    color: var(--main-color);
+  }
+
+  &.danger {
+    background-color: var(--danger-color);
+    border: 1px solid var(--danger-color);
+
+    &:hover {
+      background-color: var(--danger-color-dark);
+      border-color: var(--danger-color-dark);
+      color: var(--main-color);
+    }
+  }
+}
+

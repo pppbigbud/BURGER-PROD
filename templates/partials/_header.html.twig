@@ -1,0 +1,141 @@
+<div class="headerCenter">
+    <div class="headerBackground">
+        <header>
+            <div class="blocMenu backHeaderBurger">
+                <a href="{{ path('app_burger_index') }}" class="test">
+                    <img class="iconHeader"
+                         src="{{ asset('/build/images/burgerPanier.png') }}"
+                         alt="">BURGERS
+                </a>
+                <div class="testBarre"></div>
+            </div>
+
+            <div class="blocMenu backHeaderTacos">
+                <div class="blocImagePicto">
+                    <a href="{{ path('app_tacos_index') }}" class="test">
+                        <img class="iconHeader"
+                             src="{{ asset('build/images/tacosPanier.png') }}"
+                             alt="">TACOS
+                    </a>
+                </div>
+                <div class="testBarre"></div>
+            </div>
+
+            <div class="logoHeader" id="test">
+
+                {% if app.request.requestUri == '/drink/' %}
+                    <img class="logoBloc" id="blocLogo" src="{{ asset('build/images/frittesPanier.png') }}"
+                         alt="Logo 34 Burger">
+                {% elseif app.request.requestUri == '/tacos/' %}
+                    <img class="logoBloc" id="blocLogo" src="{{ asset('build/images/tacosPanier.png') }}"
+                         alt="Logo 34 Burger">
+                {% else %}
+                    <img class="logoBloc" id="blocLogo" src="{{ asset('build/images/burgerPanier.png') }}"
+                         alt="Logo 34 Burger">
+                {% endif %}
+
+            </div>
+
+            <div class="blocMenu backHeaderDrink">
+                <a href="{{ path('app_drink_index') }}" class="test">
+                    <img class="iconHeader"
+                         src="{{ asset('build/images/frittesPanier.png') }}"
+                         alt="">BOISSONS
+                </a>
+                <div class="testBarre"></div>
+            </div>
+
+            <div class="blocMenu backHeaderContact">
+                <a href="{{ path('app_contact') }}" class="test">
+                    <img class="iconHeader"
+                         src="{{ asset('build/images/orderBurger.png') }}"
+                         alt="">CONTACT
+
+                </a>
+                <div class="testBarre"></div>
+            </div>
+
+        </header>
+    </div>
+</div>
+
+
+<div class="headerResponsive">
+    <div class="blocMenuResponsive">
+        <div class="linkIMGResp">
+            <a href="{{ path('app_burger_index') }}" class="test">
+                <img class="logoBloc" id="blocLogo" src="{{ asset('build/images/burgerPanier.png') }}"
+                     alt="Logo 34 Burger">
+            </a>
+        </div>
+    </div>
+    <div class="blocMenuResponsive">
+        <div class="linkIMGResp">
+        <a href="{{ path('app_tacos_index') }}" class="test">
+        <img class="iconHeader"
+             src="{{ asset('build/images/tacosPanier.png') }}"
+             alt="">
+        </a>
+        </div>
+    </div>
+    <div class="blocMenuLogoResponsive">
+        <div class="linkIMGResp">
+            <a href="{{ path('app_burger_index') }}" class="test">
+                <img class="logoBloc" id="blocLogo" src="{{ asset('build/images/BurgerLogo.png') }}"
+                     alt="Logo 34 Burger">
+            </a>
+        </div>
+    </div>
+    <div class="blocMenuResponsive">
+        <div class="linkIMGResp">
+            <a href="{{ path('app_drink_index') }}" class="test">
+                <img class="iconHeader"
+                     src="{{ asset('build/images/frittesPanier.png') }}"
+                     alt="">
+            </a>
+        </div>
+    </div>
+    <div class="blocMenuResponsive">
+        <div class="linkIMGResp">
+            <a href="{{ path('app_contact') }}" class="test">
+                <img class="iconHeader"
+                     src="{{ asset('build/images/orderBurger.png') }}"
+                     alt="">
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    const activePage = window.location.pathname
+    const links = document.querySelectorAll('.blocMenu')
+    const test = document.querySelectorAll('.testBarre')
+
+    links.forEach(bloc => {
+        console.log(activePage)
+        if (activePage !== "/") {
+            if (bloc.querySelector("a").href.includes(activePage)) {
+                bloc.querySelector('.testBarre').style.display = "block"
+            } else {
+                bloc.querySelector('.testBarre').style.display = "none"
+            }
+        }
+    })
+</script>
+<script>
+    const logo = document.querySelector(".logoBloc")
+    console.log(logo)
+
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            console.log('test')
+            logo.classList.remove('logoBloc')
+            logo.classList.add('miniSize')
+        } else {
+            logo.classList.add('logoBloc')
+            logo.classList.remove('miniSize')
+        }
+    })
+</script>

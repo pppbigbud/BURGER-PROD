@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Drink{% endblock %}
+
+{% block main %}
+    <h1>Modifier les Boissons</h1>
+
+    {{ include('admin/drink/_form.html.twig', {'button_label': 'Update'}) }}
+
+
+    {{ include('admin/drink/_delete_form.html.twig') }}
+{% endblock %}

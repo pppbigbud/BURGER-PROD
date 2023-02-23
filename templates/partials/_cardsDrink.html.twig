@@ -1,0 +1,49 @@
+<div class="card m-4">
+    <div class="imgBx">
+        <img src="{{ asset( 'build/images/drink/') ~ drink.imagePath }}" alt="nike-air-shoe">
+    </div>
+
+    <div class="contentBx">
+
+        <h2>{{ drink.name }}</h2>
+        <p class="description">{{ drink.description }}</p>
+
+        <div class="prix">
+            <p class="prixBurger">{{ drink.price }} €</p>
+        </div>
+
+
+        {% if app.user == null %}
+            <a class="btnAjoutCart m-2" href="{{ path('app_login') }}"><i class="fa-solid fa-person-chalkboard"></i>
+                Créer un compte</a>
+            <a class="btnAjoutCart m-2" href="{{ path('app_login') }}"><i class="fa-solid fa-key"></i> Se connecter</a>
+
+        {% endif %}
+
+{#        {% if app.user != null %}#}
+{#            <a class="btnAjoutCart" data-add-drink-cart="{{ drink.id }}">#}
+{#                <i class="fa-solid fa-cart-plus"></i> Ajouter au Panier</a>#}
+{#        {% endif %}#}
+
+{#        {% if is_granted("ROLE_ADMIN") %}#}
+{#            <a class="btnModifierCart" href="{{ path('app_drink_new', {'id': drink.id}) }}">Nouveau</a>#}
+{#            <a class="btnModifierCart" href="{{ path('app_drink_edit', {'id': drink.id}) }}">Modifier/Supprimer</a>#}
+{#        {% endif %}#}
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+</div>
+
+
+{# <a href="{{ path('app_drink_show', {'id': drink.id}) }}">show</a> #}
+{# <a href="{{ path('app_drink_new') }}">Create new</a> #}

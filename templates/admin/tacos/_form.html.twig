@@ -1,0 +1,118 @@
+<div class="containerAdminTacos ">
+
+    <div class="rowAdminTacos">
+        <div class="blocFormLogo">
+            <img src="{{ asset('build/images/tacosSize.png') }}" alt="tacos" class="imgFormSize">
+        </div>
+        <div class="fondFormTacosSize">
+{#            <div class="alignFormImg"></div>#}
+
+            {{ form_start(formSize) }}
+
+            <div class="spaceRowForm">
+                {{ form_errors(formSize.name) }}
+                {{ form_label(formSize.name) }}
+                {{ form_widget(formSize.name) }}
+            </div>
+
+            <div class="spaceRowForm">
+                {{ form_errors(formSize.price) }}
+                {{ form_label(formSize.price) }}
+                {{ form_widget(formSize.price) }}
+            </div>
+
+        </div>
+
+        <div class="blocFormBtnValidation">
+            {{ form_row(formSize.submit, { 'label': 'Ajouter' }) }}
+        </div>
+
+        {{ form_end(formSize) }}
+
+    </div>
+
+    <div class="rowAdminTacos">
+        <div class="blocFormLogo">
+            <img src="{{ asset('build/images/tacosMeat.png') }}" alt="tacos" class="imgFormMeat">
+        </div>
+        <div class="fondFormTacosMeat">
+
+{#            <div class="alignFormImg"></div>#}
+
+            {{ form_start(formMeat) }}
+
+            <div class="spaceRowForm">
+                {{ form_errors(formMeat.name) }}
+                {{ form_label(formMeat.name) }}
+                {{ form_widget(formMeat.name) }}
+            </div>
+
+            <div class="spaceRowForm">
+                {{ form_errors(formMeat.price) }}
+                {{ form_label(formMeat.price) }}
+                {{ form_widget(formMeat.price) }}
+            </div>
+
+            <div class="blocFormBtnValidation">
+                {{ form_row(formMeat.submit, { 'label': 'Ajouter' }) }}
+            </div>
+
+            {{ form_end(formMeat) }}
+
+        </div>
+    </div>
+
+    <div class="rowAdminTacos">
+        <div class="blocFormLogo">
+            <img src="{{ asset('build/images/sauceTacos.png') }}" alt="tacos" class="imgFormSauce">
+        </div>
+        <div class="fondFormTacosSauce">
+
+{#            <div class="alignFormImg"></div>#}
+
+            {{ form_start(formSauce) }}
+
+            <div class="spaceRowForm">
+                {{ form_errors(formSauce.name) }}
+                {{ form_label(formSauce.name) }}
+                {{ form_widget(formSauce.name) }}
+            </div>
+
+            <div class="blocFormBtnValidation">
+                {{ form_row(formSauce.submit, { 'label': 'Ajouter' }) }}
+            </div>
+
+            {{ form_end(formSauce) }}
+
+        </div>
+
+    </div>
+
+    <div class="rowAdminTacos">
+        <div class="blocFormLogo">
+            <img src="{{ asset('build/images/cheeseTacosConfig.png') }}" alt="tacos" class="imgFormCheese">
+        </div>
+        <div class="fondFormTacosCheese">
+
+{#            <div class="alignFormImg"></div>#}
+
+            {{ form_start(formCheese) }}
+
+            <div class="spaceRowForm">
+                {{ form_errors(formCheese.name) }}
+                {{ form_label(formCheese.name) }}
+                {{ form_widget(formCheese.name) }}
+            </div>
+
+            <div class="blocFormBtnValidation">
+                {{ form_row(formCheese.submit, { 'label': 'Ajouter' }) }}
+            </div>
+
+            {{ form_end(formCheese) }}
+
+        </div>
+    </div>
+
+
+</div>
+

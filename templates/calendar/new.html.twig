@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouvelle reservation{% endblock %}
+
+{% block main %}
+
+        <h1>Creer une nouvelle commande</h1>
+
+        {{ include('calendar/_form.html.twig') }}
+
+        <a href="{{ path('app_calendar_index') }}">back to list</a>
+
+{% endblock %}

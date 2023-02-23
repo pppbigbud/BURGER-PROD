@@ -1,0 +1,43 @@
+<div class="containerAdminDrink ">
+
+    <div class="rowAdminDrink">
+        <div class="fondFormDrinkSize">
+            <div class="alignFormImg"></div>
+
+            {{ form_start(form) }}
+
+            <div class="spaceRowForm">
+                {{ form_errors(form.Name) }}
+                {{ form_label(form.Name) }}
+                {{ form_widget(form.Name) }}
+            </div>
+
+            <div class="spaceRowForm">
+                {{ form_label(form.Size) }}
+                {{ form_widget(form.Size) }}
+            </div>
+
+            <div class="spaceRowForm">
+                {{ form_label(form.Price) }}
+                {{ form_widget(form.Price) }}
+            </div>
+
+            <div class="spaceRowForm">
+                {{ form_label(form.imageFile) }}
+                {{ form_widget(form.imageFile) }}
+            </div>
+
+        </div>
+
+        <div class="blocFormBtnValidationDrink">
+            {{ form_row(form.submit, { 'label': 'Ajouter' }) }}
+        </div>
+        <div class="blocFormBtnRetourDrink">
+            <a href="https://127.0.0.1:8000/drink/" class="btn">Retour vers les Boissons</a>
+        </div>
+
+        {{ form_end(form) }}
+    </div>
+
+</div>
+

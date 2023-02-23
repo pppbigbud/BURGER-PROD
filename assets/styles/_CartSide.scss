@@ -1,0 +1,132 @@
+.blocPanier {
+  width: 20%;
+  height: auto;
+  border-radius: 10px;
+  background-color: hsl(0, 0%, 30%);
+  box-shadow: inset 0 0 0.5px 1px hsla(0, 0%,
+          100%, 0.075),
+    /* shadow ring 👇 */
+  0 0 0 1px hsla(0, 0%, 0%, 0.05),
+    /* multiple soft shadows 👇 */
+  0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+  0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
+  0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+  position: fixed;
+  transform: translate(470%, 100%);
+  z-index: 500;
+
+  .centrage {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .nameUserSideCart {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      width: 100px;
+      height: auto;
+      color: white;
+    }
+
+    .connectUserSideCart {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      width: 100px;
+      height: auto;
+      padding-bottom: 5%;
+      color: white;
+    }
+
+    .imgCartSide {
+      width: 20%;
+      margin: 5%;
+    }
+  }
+}
+
+.CartSideQuantity {
+  position: relative;
+
+  .rondPriceTacos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 20px;
+    left: -30px;
+    z-index: 600;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #dc3214;
+    font-size: xx-large;
+    font-weight: bold;
+  }
+
+  .rondPriceBurger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -25px;
+    left: -30px;
+    z-index: 600;
+    width: 40px;
+    height: 40px;
+    //height: 100%;
+    //width: 100%;
+    border-radius: 20px;
+    background-color: green;
+    font-size: xx-large;
+    font-weight: bold;
+  }
+
+  //.notifPanierBurger {
+  //  height: 100%;
+  //  width: 100%;
+  //  border-radius: 20px;
+  //  background-color: green;
+  //  font-size: xx-large;
+  //  font-weight: bold;
+  //}
+
+  .rondPriceDrink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 65px;
+    left: -30px;
+    z-index: 600;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #ff7300;
+    font-size: xx-large;
+    font-weight: bold;
+  }
+
+  .burgerSideCartImg {
+    position: absolute;
+    top: -35px;
+    left: -55px;
+  }
+
+  .tacosSideCartImg {
+    position: absolute;
+    top: 9px;
+    left: -50px;
+  }
+
+  .drinkSideCartImg {
+    position: absolute;
+    top: 65px;
+    left: -55px;
+    transform: scaleX(-1);
+  }
+
+}
+
+

@@ -1,0 +1,176 @@
+.containerAdminTacos {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  .rowAdminTacos {
+    position: relative;
+    width: 20%;
+    height: auto;
+    padding: 50px;
+    z-index: 2;
+
+    .fondFormTacosSize {
+      padding: 20px 10px 20px 10px;
+      background-color: hsl(0, 0%, 21%);
+      border-radius: 10px;
+      box-shadow: inset 0 0 0.5px 1px hsla(0, 0%,
+              100%, 0.075),
+        /* shadow ring 👇 */
+      0 0 0 1px hsla(0, 0%, 0%, 0.05),
+        /* multiple soft shadows 👇 */
+      0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+      0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
+      0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+    }
+
+    .fondFormTacosMeat {
+      padding: 20px 10px 20px 10px;
+      background-color: hsl(0, 0%, 21%);
+      border-radius: 10px;
+      box-shadow: inset 0 0 0.5px 1px hsla(0, 0%,
+              100%, 0.075),
+        /* shadow ring 👇 */
+      0 0 0 1px hsla(0, 0%, 0%, 0.05),
+        /* multiple soft shadows 👇 */
+      0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+      0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
+      0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+
+    }
+
+    .fondFormTacosSauce {
+      padding: 20px 10px 20px 10px;
+      background-color: hsl(0, 0%, 21%);
+      border-radius: 5%;
+      box-shadow: inset 0 0 0.5px 1px hsla(0, 0%,
+              100%, 0.075),
+        /* shadow ring 👇 */
+      0 0 0 1px hsla(0, 0%, 0%, 0.05),
+        /* multiple soft shadows 👇 */
+      0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+      0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
+      0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+
+    }
+
+    .fondFormTacosCheese {
+      padding: 20px 10px 20px 10px;
+      background-color: hsl(0, 0%, 21%);
+      border-radius: 5%;
+      box-shadow: inset 0 0 0.5px 1px hsla(0, 0%,
+              100%, 0.075),
+        /* shadow ring 👇 */
+      0 0 0 1px hsla(0, 0%, 0%, 0.05),
+        /* multiple soft shadows 👇 */
+      0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+      0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
+      0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+
+
+    }
+  }
+}
+
+.blocFormLogo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  top: -3%;
+  left: 25%;
+  width: 50%;
+  height: 24%;
+  background-color: hsl(0, 0%, 21%);
+  border-radius: 10px;
+  z-index: -1;
+  box-shadow: inset 0 0 0.5px 1px hsla(0, 0%,
+          100%, 0.075),
+    /* shadow ring 👇 */
+  0 0 0 1px hsla(0, 0%, 0%, 0.05),
+    /* multiple soft shadows 👇 */
+  0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+  0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
+  0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+
+  .imgFormSize {
+    width: 30%;
+    height: auto;
+    margin-top: 5px;
+  }
+
+  .imgFormCheese {
+    width: 35%;
+    height: auto;
+  }
+
+  .imgFormSauce {
+    width: 29%;
+    height: auto;
+    margin-top: 5px;
+  }
+
+  .imgFormMeat {
+    width: 45%;
+    height: auto;
+    margin-top: 8px;
+  }
+}
+
+.blocFormBtnValidation {
+  position: absolute;
+  top: 55%;
+  left: 25%;
+  width: 70%;
+  height: 24%;
+  z-index: -1;
+
+  .btn {
+    width: 70%;
+    height: 100px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: hsl(120, 100%, 25%);
+    border-color: #009955;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0.5px 1px hsla(0, 0%,
+            100%, 0.075),
+      /* shadow ring 👇 */
+    0 0 0 1px hsla(0, 0%, 0%, 0.05),
+      /* multiple soft shadows 👇 */
+    0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+    0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
+    0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+  }
+}
+
+.alignFormImg {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    font-size: 2em;
+  }
+}
+
+.spaceRowForm {
+  margin: 10px;
+}
+
+@media (orientation: portrait) {
+  .containerAdminTacos {
+    flex-direction: column;
+    align-items: center;
+
+    .rowAdminTacos {
+      width: 70%;
+      height: auto;
+
+    }
+  }
+}

@@ -1,0 +1,89 @@
+<div class="blocPanier">
+
+    <div class="CartSideQuantity">
+
+        {#- -------------------------------BURGER------------------------------------ -#}
+
+                {% set hasBurger = totalBurgerSideCart > 0 %}
+                    <div data-cart-burger class="{{ hasBurger ? "" : "d-none" }}">
+                        <div class="rondPriceBurger">
+                            {{ totalBurgerSideCart }}
+                        </div>
+                        <div class="burgerSideCartImg">
+                            <img src="{{ asset( 'build/images/burgerPanier.png') }}"
+                                 alt=""
+                                 style="width: 45px; height: 45px"
+                                 class="rounded-circle"/>
+                        </div>
+                    </div>
+
+
+        {#- -------------------------------TACOS------------------------------------ -#}
+
+        {% if totalTacosSideCart  > 0 %}
+            <div class="rondPriceTacos">
+                {{ totalTacosSideCart }}
+            </div>
+            <div class="tacosSideCartImg">
+                <img src="{{ asset( 'build/images/tacosPanier.png') }}"
+                     alt=""
+                     style="width: 45px; height: 45px"
+                     class="rounded-circle"/>
+            </div>
+        {% endif %}
+
+        {#- -------------------------------DRINK------------------------------------ -#}
+
+        {% if totalDrinkSideCart  > 0 %}
+            <div class="rondPriceDrink">
+                {{ totalDrinkSideCart }}
+            </div>
+            <div class="drinkSideCartImg">
+                <img src="{{ asset( 'build/images/frittesPanier.png') }}"
+                     alt=""
+                     style="width: 45px; height: 45px"
+                     class="rounded-circle"/>
+            </div>
+        {% endif %}
+
+    </div>
+
+    <div class="centrage">
+
+        <a href="{{ path('app_cart') }}">
+            <img class="imgCartSide"
+                 src="{{ asset('build/images/burgerPanierCart.png') }}"
+                 alt="ACME logo">
+        </a>
+
+        {% if app.user == null %}
+
+            <a href="{{ path('app_login') }}">
+                <img class="imgCartSide"
+                     src="{{ asset('build/images/userIcon.png') }}"
+                     alt="ACME logo">
+            </a>
+
+            <div class="connectUserSideCart">
+                <p>Se<br>
+                    Connecter</p>
+            </div>
+
+        {% else %}
+
+
+            <a href="{{ path('app_logout') }}">
+                <img class="imgCartSide"
+                     src="{{ asset('build/images/userIconConnected.png') }}"
+                     alt="ACME logo"></a>
+
+            <div class="nameUserSideCart">
+                <p>Bienvenu(e)<br>
+                    {{ app.user.firstname }} <br>
+                    {{ app.user.lastname }}</p>
+            </div>
+
+        {% endif %}
+    </div>
+</div>
+

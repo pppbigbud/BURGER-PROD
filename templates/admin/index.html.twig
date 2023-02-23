@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AdminController!{% endblock %}
+
+{% block body %}
+    <h1>ADMIN DASHBOARD</h1>
+    <div class="containerAdminDashboard">
+        <a href="{{ path('app_burger_new') }}"><img class="iconHeader"
+                                                      src="{{ asset('build/images/burgerPanier.png') }}"
+                                                      alt=""></a>
+        <a href="{{ path('app_burger_index') }}"><img class="iconHeader"
+                                                      src="{{ asset('build/images/tacosPanier.png') }}"
+                                                      alt=""></a>
+        <a href="{{ path('app_burger_index') }}"><img class="iconHeader"
+                                                      src="{{ asset('build/images/frittesPanier.png') }}"
+                                                      alt=""></a>
+    </div>
+{% endblock %}
