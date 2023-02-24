@@ -1,0 +1,30 @@
+# Activer le module rewrite
+RewriteEngine On
+
+## Rediriger toutes les requêtes HTTP vers HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+#
+## Rediriger toutes les requêtes non-www vers www
+RewriteCond %{HTTP_HOST} ^34burger.fr [NC]
+RewriteRule ^(.*)$ https://www.34burger.fr/$1 [L,R=301]
+#
+## Rediriger toutes les requêtes vers le fichier index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
+#
+## Protéger le dossier "admin" avec un mot de passe
+#<Directory "/path/to/your/public/admin">
+#  AuthType Basic
+#  AuthName "Restricted Area"
+#  AuthUserFile /path/to/your/.htpasswd
+#  Require valid-user
+#</Directory>
+#
+## Empêcher l'accès direct à certains types de fichiers
+#<FilesMatch "\.(yml|php|twig)$">
+#  Order Deny,Allow
+#  Deny from all
+#</FilesMatch>
+
