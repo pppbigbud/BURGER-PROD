@@ -1,4 +1,7 @@
-$main-font: 'KoHo';
+@font-face {
+    font-family: 'ComicaB';
+    src: url('../../public/fonts/ComicaB.ttf');
+}
 
 :root {
     --main-color: #303030;

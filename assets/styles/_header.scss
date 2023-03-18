@@ -9,7 +9,7 @@
 
   .headerBackground {
     display: flex;
-    font-family: "Comica Brush", serif;
+    font-family: "ComicaB", sans-serif;
     font-size: 100%;
     justify-content: space-around;
     width: 80vw;
@@ -200,7 +200,7 @@
     position: sticky;
     top: 0;
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     justify-content: space-around;
     width: 100%;
     min-height: 10vh;
@@ -232,7 +232,7 @@
 
     .blocMenuLogoResponsive {
       display: flex;
-      align-items: start;
+      align-items: flex-start;
       justify-content: center;
       width: 100%;
       min-height: 10vh;

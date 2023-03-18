@@ -1,3 +1,4 @@
+// let CopyWebpackPlugin = require('copy-webpack-plugin');
 const Encore = require('@symfony/webpack-encore');
 const path = require('path');
 
@@ -15,6 +16,10 @@ Encore
             config: path.resolve(__dirname, 'sub-dir', 'custom.config.js'),
         };
     })
+
+    // .addPlugin(new CopyWebpackPlugin([
+    //     { from: './public/fonts', to: 'fonts' }
+    // ]))
 
     .enablePostCssLoader()
     .setOutputPath('public/build/')
@@ -78,6 +83,12 @@ Encore
         config.useBuiltIns = 'usage';
         config.corejs = '3.23';
     })
+
+    //pour les polices spécifiques
+    // .copyFiles({
+    //     from: './public/fonts/*',
+    //     to: 'fonts/[name].[ext]',
+    // })
 
     // enables Sass/SCSS support
     .enableSassLoader()
