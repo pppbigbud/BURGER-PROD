@@ -1,72 +1,72 @@
 <div class="headerCenter">
     <div class="headerBackground">
-{#        <header>#}
-            <div class="blocMenu backHeaderBurger">
-                <a href="{{ path('app_burger_index') }}" class="test">
-                    <img class="iconHeader"
-                         src="{{ asset('/build/images/burgerPanier.png') }}"
-                         alt="">BURGERS
+
+        <div class="blocMenu backHeaderBurger">
+            <a href="{{ path('app_burger_index') }}" class="burgertacos">
+                <img class="iconHeader"
+                     src="{{ asset('/build/images/burgerPanier.png') }}"
+                     alt="">BURGERS
+            </a>
+            <div class="testBarre"></div>
+        </div>
+
+        <div class="blocMenu backHeaderTacos">
+            <a href="{{ path('app_tacos_index') }}" class="burgertacos">
+                <img class="iconHeader"
+                     src="{{ asset('build/images/tacosPanier.png') }}"
+                     alt="">TACOS
+            </a>
+            <div class="testBarre"></div>
+        </div>
+
+        <div class="blocMenu logoHeader" id="test">
+
+            {% if app.request.requestUri == '/drink/' %}
+                <a href="https://localhost:8000/"><img class="logoBloc" id="blocLogo"
+                                                       src="{{ asset('build/images/frittesPanier.png') }}"
+                                                       alt="Logo 34 Burger">
                 </a>
-                <div class="testBarre"></div>
-            </div>
-
-            <div class="blocMenu backHeaderTacos">
-                <div class="blocImagePicto">
-                    <a href="{{ path('app_tacos_index') }}" class="test">
-                        <img class="iconHeader"
-                             src="{{ asset('build/images/tacosPanier.png') }}"
-                             alt="">TACOS
-                    </a>
-                </div>
-                <div class="testBarre"></div>
-            </div>
-
-            <div class="blocMenu logoHeader" id="test">
-
-                    {% if app.request.requestUri == '/drink/' %}
-                        <img class="logoBloc" id="blocLogo"
-                                                             src="{{ asset('build/images/frittesPanier.png') }}"
-                                                             alt="Logo 34 Burger">
-                    {% elseif app.request.requestUri == '/tacos/' %}
-                        <img class="logoBloc" id="blocLogo"
-                                                             src="{{ asset('build/images/tacosPanier.png') }}"
-                                                             alt="Logo 34 Burger">
-                    {% else %}
-                        <img class="logoBloc" id="blocLogo"
-                                                             src="{{ asset('build/images/burgerPanier.png') }}"
-                                                             alt="Logo 34 Burger">
-                    {% endif %}
-
-            </div>
-
-            <div class="blocMenu backHeaderDrink">
-                <a href="{{ path('app_drink_index') }}" class="test">
-                    <img class="iconHeader"
-                         src="{{ asset('build/images/frittesPanier.png') }}"
-                         alt="">BOISSONS
+            {% elseif app.request.requestUri == '/tacos/' %}
+                <a href="https://localhost:8000/"><img class="logoBloc" id="blocLogo"
+                                                       src="{{ asset('build/images/tacosPanier.png') }}"
+                                                       alt="Logo 34 Burger">
                 </a>
-                <div class="testBarre"></div>
-            </div>
-
-            <div class="blocMenu backHeaderContact">
-                <a href="{{ path('app_contact') }}" class="test">
-                    <img class="iconHeader"
-                         src="{{ asset('build/images/orderBurger.png') }}"
-                         alt="">CONTACT
-
+            {% else %}
+                <a href="https://localhost:8000/"><img class="logoBloc" id="blocLogo"
+                                                       src="{{ asset('build/images/burgerPanier.png') }}"
+                                                       alt="Logo 34 Burger">
                 </a>
-                <div class="testBarre"></div>
-            </div>
+            {% endif %}
 
-{#        </header>#}
+        </div>
+
+        <div class="blocMenu backHeaderDrink">
+            <a href="{{ path('app_drink_index') }}" class="burgertacos">
+                <img class="iconHeader"
+                     src="{{ asset('build/images/frittesPanier.png') }}"
+                     alt="">BOISSONS
+            </a>
+            <div class="testBarre"></div>
+        </div>
+
+        <div class="blocMenu backHeaderContact">
+            <a href="{{ path('app_contact') }}" class="burgertacos">
+                <img class="iconHeader"
+                     src="{{ asset('build/images/orderBurger.png') }}"
+                     alt="">CONTACT
+
+            </a>
+            <div class="testBarre"></div>
+        </div>
     </div>
 </div>
 
+{#- ----------------------------MENU RESPONSIVE----------------------------- -#}
 
 <div class="headerResponsive">
     <div class="blocMenuResponsive">
         <div class="linkIMGResp">
-            <a href="{{ path('app_burger_index') }}" class="test">
+            <a href="{{ path('app_burger_index') }}" class="test" id="burger">
                 <img class="logoBloc" id="blocLogo" src="{{ asset('build/images/burgerPanier.png') }}"
                      alt="Logo 34 Burger">
             </a>
@@ -74,7 +74,7 @@
     </div>
     <div class="blocMenuResponsive">
         <div class="linkIMGResp">
-            <a href="{{ path('app_tacos_index') }}" class="test">
+            <a href="{{ path('app_tacos_index') }}" class="test" id="tacos">
                 <img class="iconHeader"
                      src="{{ asset('build/images/tacosPanier.png') }}"
                      alt="">
@@ -91,7 +91,7 @@
     </div>
     <div class="blocMenuResponsive">
         <div class="linkIMGResp">
-            <a href="{{ path('app_drink_index') }}" class="test">
+            <a href="{{ path('app_drink_index') }}" class="test" id="drink">
                 <img class="iconHeader"
                      src="{{ asset('build/images/frittesPanier.png') }}"
                      alt="">
@@ -100,7 +100,7 @@
     </div>
     <div class="blocMenuResponsive">
         <div class="linkIMGResp">
-            <a href="{{ path('app_contact') }}" class="test">
+            <a href="{{ path('app_contact') }}" class="test" id="contact">
                 <img class="iconHeader"
                      src="{{ asset('build/images/orderBurger.png') }}"
                      alt="">
@@ -112,19 +112,19 @@
 
 <script>
     const activePage = window.location.pathname
-    const links = document.querySelectorAll('.test')
+    const links = document.querySelectorAll('.burgertacos')
     const test = document.querySelectorAll('.testBarre')
 
     links.forEach(bloc => {
         // console.log(activePage)
         if (activePage !== "/") {
-            if (bloc.href.includes(activePage)) {
-                console.log("ok")
-                bloc.nextElementSibling.style.display = "block"
-            } else {
-                console.log("pouet")
-                bloc.nextElementSibling.style.display = "none"
-            }
+        if (bloc.href.includes(activePage)) {
+            console.log("ok")
+            bloc.nextElementSibling.style.display = "block"
+        } else {
+            console.log("pouet")
+            bloc.nextElementSibling.style.display = "none"
+        }
         }
     })
 </script>
