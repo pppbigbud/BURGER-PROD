@@ -1,6 +1,6 @@
 <div class="headerCenter">
     <div class="headerBackground">
-        <header>
+{#        <header>#}
             <div class="blocMenu backHeaderBurger">
                 <a href="{{ path('app_burger_index') }}" class="test">
                     <img class="iconHeader"
@@ -21,18 +21,21 @@
                 <div class="testBarre"></div>
             </div>
 
-            <div class="logoHeader" id="test">
+            <div class="blocMenu logoHeader" id="test">
 
-                {% if app.request.requestUri == '/drink/' %}
-                    <img class="logoBloc" id="blocLogo" src="{{ asset('build/images/frittesPanier.png') }}"
-                         alt="Logo 34 Burger">
-                {% elseif app.request.requestUri == '/tacos/' %}
-                    <img class="logoBloc" id="blocLogo" src="{{ asset('build/images/tacosPanier.png') }}"
-                         alt="Logo 34 Burger">
-                {% else %}
-                    <img class="logoBloc" id="blocLogo" src="{{ asset('build/images/burgerPanier.png') }}"
-                         alt="Logo 34 Burger">
-                {% endif %}
+                    {% if app.request.requestUri == '/drink/' %}
+                        <img class="logoBloc" id="blocLogo"
+                                                             src="{{ asset('build/images/frittesPanier.png') }}"
+                                                             alt="Logo 34 Burger">
+                    {% elseif app.request.requestUri == '/tacos/' %}
+                        <img class="logoBloc" id="blocLogo"
+                                                             src="{{ asset('build/images/tacosPanier.png') }}"
+                                                             alt="Logo 34 Burger">
+                    {% else %}
+                        <img class="logoBloc" id="blocLogo"
+                                                             src="{{ asset('build/images/burgerPanier.png') }}"
+                                                             alt="Logo 34 Burger">
+                    {% endif %}
 
             </div>
 
@@ -55,7 +58,7 @@
                 <div class="testBarre"></div>
             </div>
 
-        </header>
+{#        </header>#}
     </div>
 </div>
 
@@ -71,11 +74,11 @@
     </div>
     <div class="blocMenuResponsive">
         <div class="linkIMGResp">
-        <a href="{{ path('app_tacos_index') }}" class="test">
-        <img class="iconHeader"
-             src="{{ asset('build/images/tacosPanier.png') }}"
-             alt="">
-        </a>
+            <a href="{{ path('app_tacos_index') }}" class="test">
+                <img class="iconHeader"
+                     src="{{ asset('build/images/tacosPanier.png') }}"
+                     alt="">
+            </a>
         </div>
     </div>
     <div class="blocMenuLogoResponsive">
@@ -109,24 +112,26 @@
 
 <script>
     const activePage = window.location.pathname
-    const links = document.querySelectorAll('.blocMenu')
+    const links = document.querySelectorAll('.test')
     const test = document.querySelectorAll('.testBarre')
 
     links.forEach(bloc => {
-        console.log(activePage)
+        // console.log(activePage)
         if (activePage !== "/") {
-            if (bloc.querySelector("a").href.includes(activePage)) {
-                bloc.querySelector('.testBarre').style.display = "block"
+            if (bloc.href.includes(activePage)) {
+                console.log("ok")
+                bloc.nextElementSibling.style.display = "block"
             } else {
-                bloc.querySelector('.testBarre').style.display = "none"
+                console.log("pouet")
+                bloc.nextElementSibling.style.display = "none"
             }
         }
     })
 </script>
+
 <script>
     const logo = document.querySelector(".logoBloc")
-    console.log(logo)
-
+    // console.log(logo)
 
     window.addEventListener('scroll', () => {
         if (window.scrollY > 100) {

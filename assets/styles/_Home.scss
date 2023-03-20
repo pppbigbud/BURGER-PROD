@@ -2,364 +2,85 @@
   box-sizing: border-box;
 }
 
-$color-1: #2B2A2B; // gray
-$color-2: #a6a6a6; // red
-$color-3: #009955; // green
-$color-4: #FFFFFF; // white
-$color-5: #646464; // blue
-$color-6: #ECBA39; // gold
-$color-8: #2a2a2a; // black
-$color-9: #c3c7d4; // gray pale
-$bold: 700;
-$regular: 400;
-$light: 300;
-$transition: all .3s ease-in-out;
-$shadow-1: 15px 15px 30px -15px rgb(166, 166, 166);
-$shadow-2: inset 0 0 0.5px 1px hsla(0, 0%,
-        100%, 0.075),
-  /* shadow ring 👇 */
-0 0 0 1px hsla(0, 0%, 0%, 0.05),
-  /* multiple soft shadows 👇 */
-0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
-0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
-0 3.5px 6px hsla(0, 0%, 0%, 0.09);
-$radius: 12px;
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes zoom {
-  0% {
-    transform: scale(.8);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  background: #a6a6a6;
-  overflow-x: hidden;
-}
-
-.visually-hidden {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0 !important;
-  border: 0 !important;
-  height: 1px !important;
-  width: 1px !important;
-  overflow: hidden;
-}
-
-.grid-wrapper {
+.alignburgerPresentation {
   display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 65vh;
-  max-width: 1200px;
-  margin: auto;
-  padding: 60px;
-}
 
-.grid {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(8, 1fr);
-  grid-template-areas:
-		"hero hero hero hero hero hero detail 	detail detail detail 	detail detail"
-		"hero hero hero hero hero hero detail 	detail detail detail 	detail detail"
-		"hero hero hero hero hero hero detail 	detail detail detail 	detail detail"
-		"hero hero hero hero hero hero detail 	detail detail detail 	detail detail"
-		"hero hero hero hero hero hero price 	price 	price price 	more 	more"
-		"hero hero hero hero hero hero empty1 	media 	media media 	more 	more"
-		"info info info info info info info info info info info info"
-		"info info info info info info info info info info info info";
-  width: 100%;
-  height: 95%;
-  border-radius: $radius;
-  box-shadow: $shadow-2;
-  background-color: $color-5;
-  @media screen and (max-height: 767px) {
-    grid-template-areas:
-		"hero hero hero hero hero detail detail 	detail detail detail 	detail detail"
-		"hero hero hero hero hero detail detail 	detail detail detail 	detail detail"
-		"hero hero hero hero hero detail detail 	detail detail detail 	detail detail"
-		"hero hero hero hero hero detail detail 	detail detail detail 	detail detail"
-		"hero hero hero hero hero price price 		price 	price price 	more 	more"
-		"hero hero hero hero hero empty1 empty1 	media 	media media 	more 	more"
-		"info info info info info info info info info info info info"
-		"info info info info info info info info info info info info";
-  };
-
-  &:before {
-    content: attr(data-text);
-    position: absolute;
-    top: 15%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 14vw;
-    font-weight: $bold;
-    color: rgba($color-8, .08);
-    opacity: 0;
-    animation: fadeIn 2s .2s ease-in forwards;
-  }
-}
-
-.grid__item {
-  transition: $transition;
-  position: relative;
-  z-index: 1;
-}
-
-.item-hero {
-  grid-area: hero;
-  display: flex;
-  align-items: flex-start;
-
-  img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: scale-down;
-    margin-left: -30px;
-    margin-top: -30px;
-    opacity: 0;
-    transform: scale(.5);
-    animation: fadeIn .5s .2s ease-in forwards,
-    zoom .5s ease-in forwards;
-    will-change: transform, opacity;
-    @media screen and (max-height: 767px) {
-      transform: translate(15px, 15px);
-    }
-  }
-}
-
-.item-detail {
-  grid-area: detail;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 0px 120px 0px 0;
-
-  .title {
-    margin: 0;
-    font-size: 2.5vw;
-    font-weight: $bold;
-    color: $color-4;
-    opacity: 0;
-    animation: fadeIn .5s .4s ease-in forwards;
-    @media screen and (max-height: 767px) {
-      font-size: 2%;
-    }
-  }
-
-  .description {
-    font-size: 1.2rem;
-    font-weight: $light;
-    color: rgba($color-4, .8);
-    opacity: 0;
-    margin-top: 1rem;
-    animation: fadeIn .5s .6s ease-in forwards;
-    @media screen and (max-height: 767px) {
-      font-size: 1.6rem;
-    }
-  }
-}
-
-.item-info {
-  grid-area: info;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  background-color: $color-1;
-  border-bottom-left-radius: $radius;
-
-  .info {
+  .burgerPresentation {
     display: flex;
-    flex-direction: column;
-    text-align: center;
-    color: $color-4;
-    opacity: 0;
-    @for $i from 1 through 3 {
-      &:nth-child(#{$i}) {
-        animation: fadeIn .5s (#{$i + $i*100}ms) ease-in forwards;
-      }
-    }
-
-    .value {
-      display: block;
-      margin-bottom: -10px;
-      font-size: 2.5vw;
-    }
-
-    .name {
-      display: block;
-      font-size: 1vh;
-      font-weight: $light;
-    }
-  }
-}
-
-.item-more {
-  grid-area: more;
-  background-color: $color-1;
-
-  &:hover {
-    background-color: darken($color-1, 5%);
-  }
-
-  a {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding: 15px;
-    width: 100%;
-    height: 100%;
-    color: $color-4;
-    font-size: 1.8rem;
-    text-decoration: none;
-  }
+    width: 70%;
+    height: 40vh;
+    background-color: hsl(0, 0%, 21%);
+    border-radius: 10px;
+    box-shadow: inset 0 0 0.5px 1px hsla(0, 0%,
+            100%, 0.075),
+      /* shadow ring 👇 */
+    0 0 0 1px hsla(0, 0%, 0%, 0.05),
+      /* multiple soft shadows 👇 */
+    0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+    0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
+    0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+    font-size: 1vw;
+    margin-top: 5vh;
+    opacity: 0.85;
 
-  span {
-    display: flex;
-    flex-direction: column;
-  }
+    .imgBurgerPresentation {
+      width: 40%;
+      height: auto;
+      padding: 10px 50px 10px 50px;
+    }
 
-  svg {
-    margin-top: 15px;
-  }
-}
+    .aligementTxtPresentation {
+      display: flex;
+      flex-direction: column;
+      //justify-content: space-between;
+      height: 100%;
 
-.item-next {
-  grid-area: next;
-  background: $color-2;
-  border-bottom-right-radius: $radius;
-
-  a {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    color: $color-4;
-
-    &:hover {
-      img {
-        transform: scale(1.05);
+      .titre34Burger {
+        width: auto;
+        height: 50%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        font-family: "Comica Brush", serif;
+        font-size: 8vw;
+        margin-bottom: 0;
+        margin-top: 3vh;
+        color: white;
       }
-    }
-  }
 
-  img {
-    max-width: 100%;
-    max-height: 100%;
-    transition: $transition;
-  }
+      ul {
+        width: auto;
+        height: 50%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        //padding-top: 4vh;
 
-  span {
-    display: block;
-    margin-top: 15px;
-    font-size: 1.4rem;
-    font-weight: $light;
-  }
-}
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          flex-direction: column;
+          width: 25%;
+          height: auto;
 
-.item-media {
-  grid-area: media;
-  position: relative;
-
-  &:hover {
-    img {
-      transform: scale(1.05);
-    }
-  }
-
-  figure {
-    margin: 0;
-    height: 100%;
-    overflow: hidden;
-  }
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: $transition;
-  }
-
-  button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    border: 0;
-    padding: 0;
-    background: none;
-
-    &:hover {
-      cursor: pointer;
-    }
-
-    span {
-      @extend .visually-hidden;
-    }
-
-    svg {
-    }
-  }
-}
-
-.item-like {
-  grid-area: like;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: $color-4;
-
-  label {
-    &:hover {
-      cursor: pointer;
-    }
-
-    input {
-      display: none;
-
-      & ~ .label {
-        display: block;
-        margin-top: 8px;
-
-        svg {
-          transform: scale(0.8);
-          transition: $transition;
-
-          path {
-            fill: $color-9;
+          .imgIconesPresentation {
+            width: 50%;
+            height: auto;
           }
-        }
-      }
 
-      &:checked ~ .label {
-        svg {
-          transform: scale(1);
+          //.texteIntroBurger {
+          //  font-family: "Comica Brush", sans-serif;
+          //}
 
-          path {
-            fill: $color-2;
+          .nbrBurgerIntro {
+            font-family: "Hey August", serif;
+            font-size: 4vw;
+            color: white;
           }
         }
       }
@@ -367,11 +88,73 @@ body {
   }
 }
 
-.item-empty1 {
-  grid-area: empty1;
+.burgerPresentation:hover {
+  opacity: 1;
+  transition: opacity;
+  transition-duration: 0.5s;
+  cursor: pointer;
+  -webkit-box-shadow: -1px -1px 82px -8px rgba(252, 252, 252, 0.1);
+  -moz-box-shadow: -1px -1px 82px -8px rgba(252, 252, 252, 0.1);
 }
 
-.item-empty2 {
-  grid-area: empty2;
-  background: $color-1;
+
+@media (max-width: 1100px) {
+
+  .alignburgerPresentation {
+    margin-top: 5vh;
+
+    .burgerPresentation {
+      width: 80%;
+      height: 68vh;
+      flex-direction: column;
+      position: relative;
+
+      .imgBurgerPresentation {
+        width: 80%;
+        height: auto;
+        position: absolute;
+        top: -250px;
+        right: 70px;
+        padding: 0;
+      }
+
+      .aligementTxtPresentation {
+        .titre34Burger {
+          padding-top: 5vh;
+          height: auto;
+          align-items: flex-start;
+          font-size: 15vw;
+        }
+
+        ul {
+          width: 100%;
+          height: auto;
+          //display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding-top: 4vh;
+
+          li {
+            width: 100%;
+            height: auto;
+
+            .imgIconesPresentation {
+              width: 30%;
+              height: auto;
+            }
+
+            p {
+              font-size: xxx-large;
+            }
+
+            .nbrBurgerIntro {
+              font-size: 15vw;
+
+            }
+          }
+        }
+      }
+    }
+  }
 }
