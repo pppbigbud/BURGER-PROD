@@ -115,12 +115,14 @@
 }
 
 .descriptionTacos {
-  font-size: 1.5vw;
+  font-size: 3vh;
   font-weight: lighter;
+  //width: 90%;
+  height: auto;
 }
 
 .tarifTacos {
-  font-family: "Hey August", serif;
+  font-family: "Hey August", sans-serif;
   font-size: 2vw;
 }
 
@@ -242,11 +244,15 @@ ul {
 }
 
 .titreTacosAlignement {
-  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   height: auto;
+  font-size: 3vh;
 
   .titreTacos {
-    font-family: "Comica Brush", serif;
+    font-family: "Comica Brush", sans-serif;
     font-size: 10rem;
     margin-bottom: 0;
   }
@@ -288,10 +294,9 @@ ul {
   .titreTacosAlignement {
     width: 90%;
     height: auto;
-    font-size: 2rem;
 
     h3 {
-      font-size: 2rem;
+      //font-size: 2rem;
       //color: white !important;
     }
   }
@@ -345,7 +350,7 @@ ul {
 
           .priceTacosSizeResp {
             font-size: 6rem;
-            font-family: "Hey August", serif;
+            font-family: "Hey August", sans-serif;
             margin-right: 5vw;
           }
         }
@@ -360,7 +365,7 @@ ul {
 
         h3 {
           font-size: 4rem;
-          font-family: "Comica Brush", serif;
+          font-family: "Comica Brush", sans-serif;
         }
 
         p {
@@ -418,7 +423,7 @@ ul {
 
       h3 {
         font-size: 4rem;
-        font-family: "Comica Brush", serif;
+        font-family: "Comica Brush", sans-serif;
         margin-left: 5vw;
         padding-bottom: 0;
       }

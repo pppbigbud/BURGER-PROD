@@ -1,80 +1,95 @@
-.telContactResp {
-  font-size: 6rem;
-  font-family: "Hey August", serif;
-}
-
 .alignementBackgroundContact {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 
-  .ContactBoxPlacement {
-    width: 80%;
+  .AlignContact {
+    width: 90%;
     height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
 
-    .titreBurger {
-      font-size: 10rem;
-      font-family: "Comica Brush", serif;
+    .imgPresentation34 {
+      width: 25%;
+      height: auto;
+      border-radius: 20px;
     }
 
-    .alignContact {
-      width: 100%;
-      height: auto;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center;
+    .alignContactTelEmail {
+      flex-direction: column;
+      margin-top: 5vh;
 
-      .blocContactTelMail1 {
+      .telContact{
+        font-family: "Hey August", serif;
+        font-size: 10vh;
+        color: white;
+      }
+    }
+  }
+
+  .alignementCarte {
+    width: 90%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    iframe {
+      width: 100%;
+      height: 60vh;
+      background-color: hsl(0, 0%, 21%);
+      border-radius: 10px;
+      box-shadow: inset 0 0 0.5px 1px hsla(0, 0%,
+              100%, 0.075),
+        /* shadow ring 👇 */
+      0 0 0 1px hsla(0, 0%, 0%, 0.05),
+        /* multiple soft shadows 👇 */
+      0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+      0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
+      0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+      font-size: 1vw;
+      margin-top: 3vh;
+    }
+  }
+}
+
+.telContact:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+
+  .alignementBackgroundContact {
+
+    .AlignContact {
+      flex-direction: column;
+
+      .imgPresentation34 {
         width: 50%;
         height: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        .telContact {
-          //background-color: hsl(0, 0%, 21%);
-          //border-radius: 10px;
-          color: white;
-          //box-shadow: inset 0 0 0.5px 1px hsla(0, 0%,
-          //        100%, 0.075),
-          //  /* shadow ring 👇 */
-          //0 0 0 1px hsla(0, 0%, 0%, 0.05),
-          //  /* multiple soft shadows 👇 */
-          //0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
-          //0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
-          //0 3.5px 6px hsla(0, 0%, 0%, 0.09);
-          margin: 1vw;
-        }
+        border-radius: 20px;
+        margin-top: 5vh;
       }
 
-      .blocContactTelMail2 {
-        width: 50%;
-        height: auto;
-        display: flex;
+      .alignContactTelEmail {
         flex-direction: column;
-        justify-content: center;
+        margin-top: 5vh;
 
-        .telContact {
-          //background-color: hsl(0, 0%, 21%);
+        .telContact{
+          font-family: "Hey August", serif;
+          font-size: 5vh;
           color: white;
-          //border-radius: 10px;
-          //box-shadow: inset 0 0 0.5px 1px hsla(0, 0%,
-          //        100%, 0.075),
-          //  /* shadow ring 👇 */
-          //0 0 0 1px hsla(0, 0%, 0%, 0.05),
-          //  /* multiple soft shadows 👇 */
-          //0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
-          //0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
-          //0 3.5px 6px hsla(0, 0%, 0%, 0.09);
-          margin: 1vw;
         }
       }
     }
 
     .alignementCarte {
-      width: 100%;
+      width: 90%;
       height: auto;
       display: flex;
       align-items: center;
@@ -99,8 +114,10 @@
       }
     }
   }
-}
 
-.telContact:hover{
-  cursor: pointer;
+  .telContact:hover {
+    cursor: pointer;
+  }
+
+
 }

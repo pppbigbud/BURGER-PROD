@@ -10,9 +10,9 @@
             <p class="telFooter">06 08 25 35 18</p>
         </div>
 
-        <div class="blocFooterInfo text-muted text-white">
-            <p>Mentions Légales,<br>CGV
-            </p>
+        <div class="blocFooterInfo text-muted text-white d-flex flex-column">
+            <a class="p-1 text-decoration-none" href="{{ path('app_mentions_legales') }}">Mentions Légales</a>
+            <a class="p-1 text-decoration-none" href="{{ path('app_cgv') }}">CGV</a>
         </div>
     </div>
 </footer>
@@ -21,21 +21,17 @@
     <div class="blocFondRespFooter">
         <div class="blocFooterResp">
             <div class="blocFooterInfo">
-                <p class="telFooter"><i class="fa-solid fa-phone"> 06 08 25 35 18</i></p>
+                <p class="telFooter" href="06 08 25 35 18">06 08 25 35 18</p>
             </div>
 
             <div class="blocFooterInfo">
-                <p> 34 Av. Joseph Claussat,<br>
+                <p class="text-white">34 Burger<br>34 Av. Joseph Claussat,<br>
                     63550 Saint-Rémy-sur-Durolle</p>
             </div>
         </div>
-        <div class="mentionsLegaleResp">
-            <p><i class="fa-solid fa-burger"></i>
-                Mentions Légales
-            </p>
-            <p><i class="fa-solid fa-burger"></i>
-                CGV
-            </p>
+        <div class="d-flex flex-row">
+            <a class="p-2 text-decoration-none text-white" href="{{ path('app_mentions_legales') }}">Mentions Légales</a>
+            <a class="p-2 text-decoration-none text-white" href="{{ path('app_cgv') }}">CGV</a>
         </div>
     </div>
 </div>

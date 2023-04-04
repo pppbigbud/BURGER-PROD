@@ -2,11 +2,21 @@
 
 {% block title %}Au 34 burger{% endblock %}
 
-
 {% block main %}
 
+        <div class="container d-flex w-75">
+            <p class="text-muted">Découvrez notre nouveau restaurant fast-food à Saint-Remy sur Durolle (34 Av. Joseph Claussat,
+                63550 Saint-Rémy-sur-Durolle), ouvert du
+                mercredi au samedi à partir
+                de 18h30 et toute la journée du mercredi. Nous proposons une variété de délicieux burgers et tacos faits
+                maison à partir de viandes françaises de qualité et de fromages locaux d'Auvergne. Nous offrons
+                également
+                une option végétarienne pour les hamburgers et les tacos. Nous acceptons les chèques, les espèces et les
+                cartes bancaires. Venez découvrir notre savoureuse cuisine et notre service de qualité.
+                Nous avons hâte de vous accueillir chez nous.</p>
+        </div>
     <div class="alignburgerPresentation">
-        <div class="burgerPresentation">
+        <a href="https://localhost:8000/burger/" class="burgerPresentation">
             <img class="imgBurgerPresentation" src="{{ asset('build/images/burger/Test1.png') }}"
                  alt="Au 34 burger présentation">
             <div class="aligementTxtPresentation">
@@ -35,92 +45,64 @@
 
                     <li>
                         <p class="text-muted">Large Choix</p>
-                        <p class="nbrBurgerIntro">x 12</p>
+                        <p class="nbrBurgerIntro">x 11</p>
                     </li>
 
                 </ul>
             </div>
-        </div>
+        </a>
     </div>
 
-    {#    <div class="grid-wrapper"> #}
-    {#        <div class="grid" data-text="BURGER"> #}
-    {#            <div class="grid__item item-hero"> #}
-    {#                <img src="{{ asset('build/images/cheesburger.png') }}" alt=""> #}
-    {#            </div> #}
-    {#            <div class="grid__item item-detail"> #}
-    {#                <h1 class="title">Passe prendre <br> un Burger !</h1> #}
-    {#                <p class="description">Tous nos Burgers sont préparés avec des produits locaux et des pains fait #}
-    {#                    maison</p> #}
-    {#            </div> #}
-    {#            <div class="grid__item item-info"> #}
-    {#                <div class="info"> #}
-    {#                    <span class="value">150<small>gr</small></span> #}
-    {#                    <span class="name">Steak Pure Boeuf</span> #}
-    {#                </div> #}
-    {#                <div class="info"> #}
-    {#                    <span class="value">France <small>&#127467;&#127479;</small></span> #}
-    {#                    <span class="name">Viande Origine</span> #}
-    {#                </div> #}
-    {#                <div class="info"> #}
-    {#                    <span class="value">10<small>€</small></span> #}
-    {#                    <span class="name">Prix (hors frites)</span> #}
-    {#                </div> #}
-    {#            </div> #}
-    {#        </div> #}
-    {#    </div> #}
+    <div class="alignburgerPresentation">
+        <a href="https://localhost:8000/tacos/" class="burgerPresentation">
+            <img class="imgTacosPresentation" src="{{ asset('build/images/TacosPresentation.png') }}"
+                 alt="Au 34 burger présentation">
+            <div class="aligementTxtPresentation">
+                <h1 class="titre34Burger">TACOS</h1>
+                <ul>
 
+                    <li>
+                        <p class="text-muted">Viande Origine</p>
+                        <img class="imgIconesPresentation"
+                             src="{{ asset('build/images/DrapeauFrancais.png') }}"
+                             alt="Drapeau Français">
+                    </li>
 
-    {#    <div class="grid-wrapper"> #}
-    {#        <div class="grid" data-text="TACOS"> #}
-    {#            <div class="grid__item item-hero"> #}
-    {#                <img src="{{ asset('build/images/tacos.png') }}" alt=""> #}
-    {#            </div> #}
-    {#            <div class="grid__item item-detail"> #}
-    {#                <h1 class="title">Ou sinon on fait<br>aussi des Tacos !</h1> #}
-    {#                <p class="description">Tacos réalisés avec amour et préparés avec que de bons produits</p> #}
-    {#            </div> #}
-    {#            <div class="grid__item item-info"> #}
-    {#                <div class="info"> #}
-    {#                    <span class="value">150<small>gr</small></span> #}
-    {#                    <span class="name">Steak Pure Boeuf</span> #}
-    {#                </div> #}
-    {#                <div class="info"> #}
-    {#                    <span class="value">France <small>&#127467;&#127479;</small></span> #}
-    {#                    <span class="name">Viande Origine</span> #}
-    {#                </div> #}
-    {#                <div class="info"> #}
-    {#                    <span class="value">10<small>€</small></span> #}
-    {#                    <span class="name">Prix (hors frites)</span> #}
-    {#                </div> #}
-    {#            </div> #}
-    {#        </div> #}
-    {#    </div> #}
+                    <li>
+                        <p class="text-muted">Frites Maison</p>
+                        <img class="imgIconesPresentation"
+                             src="{{ asset('build/images/IconeFrites.png') }}"
+                             alt="Frites Maison">
+                    </li>
 
-    {#    <div class="grid-wrapper"> #}
-    {#        <div class="grid" data-text="FRITES"> #}
-    {#            <div class="grid__item item-hero"> #}
-    {#                <img src="{{ asset('build/images/VisuelBoissonEtFrites.png') }}" alt=""> #}
-    {#            </div> #}
-    {#            <div class="grid__item item-detail"> #}
-    {#                <h1 class="title">Et des Frites <br> et Boissons !</h1> #}
-    {#                <p class="description">Frites 100% maison et boissons sans alcool.</p> #}
-    {#            </div> #}
-    {#            <div class="grid__item item-info"> #}
-    {#                <div class="info"> #}
-    {#                    <span class="value">150<small>gr</small></span> #}
-    {#                    <span class="name">Steak Pure Boeuf</span> #}
-    {#                </div> #}
-    {#                <div class="info"> #}
-    {#                    <span class="value">France <small>&#127467;&#127479;</small></span> #}
-    {#                    <span class="name">Viande Origine</span> #}
-    {#                </div> #}
-    {#                <div class="info"> #}
-    {#                    <span class="value">10<small>€</small></span> #}
-    {#                    <span class="name">Prix (hors frites)</span> #}
-    {#                </div> #}
-    {#            </div> #}
-    {#        </div> #}
-    {#    </div> #}
+                    <li>
+                        <p class="text-muted">Sauces</p>
+                        <p class="nbrBurgerIntro">x 8</p>
+                    </li>
+
+                    <li>
+                        <p class="text-muted">Fromages</p>
+                        <p class="nbrBurgerIntro">x 7</p>
+                    </li>
+
+                </ul>
+            </div>
+        </a>
+    </div>
+
+    <div class="alignburgerPresentation">
+        <a href="https://localhost:8000/drink/" class="burgerPresentation">
+            <img class="imgDrinkPresentation" src="{{ asset('build/images/drink/BoissonVisuel.png') }}"
+                 alt="Au 34 burger présentation">
+            <div class="aligementTxtPresentation">
+                <h1 class="titre34Burger">BOISSONS</h1>
+                <ul>
+                    <li>
+                        <p class="text-muted">Tous les grands classiques</p>
+                    </li>
+                </ul>
+            </div>
+        </a>
+    </div>
 
 {% endblock %}

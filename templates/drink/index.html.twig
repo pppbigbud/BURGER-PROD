@@ -5,12 +5,17 @@
 {% block main %}
     <div class="container">
 
-        <div class="alignementBackground">
-            <div class="titreTacosAlignement">
-                <h1 class="titreTacos text-white">Boissons</h1>
-                <h3 class="descriptionTacos mt-2 mb-5 text-muted text-center">Retrouvez l'ensemble de nos boissons ci-dessous</h3>
-            </div>
-        </div>
+    <div class="alignementBackground">
+    <div class="titreTacosAlignement">
+        <h1 class="titreTacos text-white">BOISSONS</h1>
+        <p class="descriptionTacos mt-2 mb-5 text-muted text-center">
+            Accompagnez votre repas avec notre sélection de <i class="fa-solid fa-martini-glass-citrus"></i>
+            <strong class="text-white opacity-50"> boissons rafraîchissantes</strong> dans notre nouveau
+            fast-food à <i class="fa-solid fa-location-dot"></i><strong class="text-white opacity-50"> Saint-Remy sur Durolle</strong>.
+            Nous proposons une variété de boissons classiques comme le Coca-Cola,
+            l'Orangina et bien d'autres, pour compléter votre repas avec une note de fraîcheur.
+            <strong class="text-white opacity-50">Nous vous proposons
+            également nos fameuses frites maison</strong> pour une expérience gustative complète</p>
 
         <div class="row row-cols-1 row-cols-md-4 d-flex justify-content-center ">
             {% for drink in drinks %}

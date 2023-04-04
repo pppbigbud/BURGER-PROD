@@ -10,6 +10,7 @@
   .burgerPresentation {
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
     width: 70%;
     height: 40vh;
     background-color: hsl(0, 0%, 21%);
@@ -24,7 +25,7 @@
     0 3.5px 6px hsla(0, 0%, 0%, 0.09);
     font-size: 1vw;
     margin-top: 5vh;
-    opacity: 0.85;
+    text-decoration: none;
 
     .imgBurgerPresentation {
       width: 40%;
@@ -32,10 +33,21 @@
       padding: 10px 50px 10px 50px;
     }
 
+    .imgTacosPresentation {
+      width: 50%;
+      height: auto;
+      padding: 10px 50px 10px 50px;
+    }
+
+    .imgDrinkPresentation {
+      width: 20%;
+      height: auto;
+      padding: 10px 50px 10px 50px;
+    }
+
     .aligementTxtPresentation {
       display: flex;
       flex-direction: column;
-      //justify-content: space-between;
       height: 100%;
 
       .titre34Burger {
@@ -58,24 +70,19 @@
         flex-direction: row;
         align-items: flex-start;
         justify-content: center;
-        //padding-top: 4vh;
 
         li {
           display: flex;
           align-items: center;
           justify-content: flex-start;
           flex-direction: column;
-          width: 25%;
+          width: 100%;
           height: auto;
 
           .imgIconesPresentation {
             width: 50%;
             height: auto;
           }
-
-          //.texteIntroBurger {
-          //  font-family: "Comica Brush", sans-serif;
-          //}
 
           .nbrBurgerIntro {
             font-family: "Hey August", serif;
@@ -89,8 +96,6 @@
 }
 
 .burgerPresentation:hover {
-  opacity: 1;
-  transition: opacity;
   transition-duration: 0.5s;
   cursor: pointer;
   -webkit-box-shadow: -1px -1px 82px -8px rgba(252, 252, 252, 0.1);
@@ -99,62 +104,109 @@
 
 
 @media (max-width: 1100px) {
-
   .alignburgerPresentation {
-    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     .burgerPresentation {
-      width: 80%;
-      height: 68vh;
+      display: flex;
+      align-items: center;
       flex-direction: column;
-      position: relative;
+      width: 70%;
+      height: auto;
+      background-color: hsl(0, 0%, 21%);
+      border-radius: 10px;
+      box-shadow: inset 0 0 0.5px 1px hsla(0, 0%,
+              100%, 0.075),
+        /* shadow ring 👇 */
+      0 0 0 1px hsla(0, 0%, 0%, 0.05),
+        /* multiple soft shadows 👇 */
+      0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+      0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
+      0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+      font-size: 1vw;
+      margin-bottom: 5vh;
 
       .imgBurgerPresentation {
-        width: 80%;
+        width: 75%;
         height: auto;
-        position: absolute;
-        top: -250px;
-        right: 70px;
-        padding: 0;
+        margin-top: -5vh;
+        z-index: 5;
+      }
+
+      .imgTacosPresentation {
+        width: 100%;
+        height: auto;
+        margin-top: -5vh;
+        z-index: 5;
+      }
+
+      .imgDrinkPresentation {
+        width: 40%;
+        height: auto;
+        margin-top: -5vh;
+        z-index: 5;
       }
 
       .aligementTxtPresentation {
+
         .titre34Burger {
-          padding-top: 5vh;
-          height: auto;
-          align-items: flex-start;
-          font-size: 15vw;
+          width: auto;
+          height: 100%;
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+          font-family: "Comica Brush", serif;
+          font-size: 12vw;
+          margin-bottom: 0;
+          margin-top: 1vh;
+          color: white;
         }
 
         ul {
           width: 100%;
           height: auto;
-          //display: flex;
+          display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          padding-top: 4vh;
 
           li {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
             width: 100%;
             height: auto;
 
+            p {
+              font-size: 5vw;
+              font-weight: lighter;
+            }
+
             .imgIconesPresentation {
-              width: 30%;
+              width: 20%;
               height: auto;
             }
 
-            p {
-              font-size: xxx-large;
-            }
-
             .nbrBurgerIntro {
-              font-size: 15vw;
-
+              font-family: "Hey August", serif;
+              font-size: 7vw;
+              color: white;
             }
           }
         }
       }
     }
+  }
+
+  .burgerPresentation:hover {
+    opacity: 1;
+    transition: opacity;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    -webkit-box-shadow: -1px -1px 82px -8px rgba(252, 252, 252, 0.1);
+    -moz-box-shadow: -1px -1px 82px -8px rgba(252, 252, 252, 0.1);
   }
 }

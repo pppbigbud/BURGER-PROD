@@ -22,17 +22,17 @@
         <div class="blocMenu logoHeader" id="test">
 
             {% if app.request.requestUri == '/drink/' %}
-                <a href="https://localhost:8000/"><img class="logoBloc" id="blocLogo"
+                <a href="https://34burger.fr/"><img class="logoBlocDesktop" id="blocLogo"
                                                        src="{{ asset('build/images/frittesPanier.png') }}"
                                                        alt="Logo 34 Burger">
                 </a>
             {% elseif app.request.requestUri == '/tacos/' %}
-                <a href="https://localhost:8000/"><img class="logoBloc" id="blocLogo"
+                <a href="https://34burger.fr/"><img class="logoBlocDesktop" id="blocLogo"
                                                        src="{{ asset('build/images/tacosPanier.png') }}"
                                                        alt="Logo 34 Burger">
                 </a>
             {% else %}
-                <a href="https://localhost:8000/"><img class="logoBloc" id="blocLogo"
+                <a href="https://34burger.fr/"><img class="logoBlocDesktop" id="blocLogo"
                                                        src="{{ asset('build/images/burgerPanier.png') }}"
                                                        alt="Logo 34 Burger">
                 </a>
@@ -63,83 +63,117 @@
 
 {#- ----------------------------MENU RESPONSIVE----------------------------- -#}
 
-<div class="headerResponsive">
-    <div class="blocMenuResponsive">
-        <div class="linkIMGResp">
-            <a href="{{ path('app_burger_index') }}" class="test" id="burger">
-                <img class="logoBloc" id="blocLogo" src="{{ asset('build/images/burgerPanier.png') }}"
-                     alt="Logo 34 Burger">
-            </a>
-        </div>
-    </div>
-    <div class="blocMenuResponsive">
-        <div class="linkIMGResp">
-            <a href="{{ path('app_tacos_index') }}" class="test" id="tacos">
-                <img class="iconHeader"
-                     src="{{ asset('build/images/tacosPanier.png') }}"
-                     alt="">
-            </a>
-        </div>
-    </div>
-    <div class="blocMenuLogoResponsive">
-        <div class="linkIMGResp">
-            <a href="{{ path('app_burger_index') }}" class="test">
-                <img class="logoBloc" id="blocLogo" src="{{ asset('build/images/BurgerLogo.png') }}"
-                     alt="Logo 34 Burger">
-            </a>
-        </div>
-    </div>
-    <div class="blocMenuResponsive">
-        <div class="linkIMGResp">
-            <a href="{{ path('app_drink_index') }}" class="test" id="drink">
-                <img class="iconHeader"
-                     src="{{ asset('build/images/frittesPanier.png') }}"
-                     alt="">
-            </a>
-        </div>
-    </div>
-    <div class="blocMenuResponsive">
-        <div class="linkIMGResp">
-            <a href="{{ path('app_contact') }}" class="test" id="contact">
-                <img class="iconHeader"
-                     src="{{ asset('build/images/orderBurger.png') }}"
-                     alt="">
-            </a>
-        </div>
-    </div>
+<div class="menuRespBloc">
+    <nav class="navResp">
+        <ul class="menuResp">
+            <li><a href="{{ path('app_burger_index') }}">
+                    <img class="logoBlocResp" src="{{ asset('build/images/burgerPanier.png') }}" alt="">
+                </a></li>
+
+            <li><a href="{{ path('app_tacos_index') }}">
+                    <img class="logoBlocResp" src="{{ asset('build/images/tacosPanier.png') }}" alt="">
+                </a></li>
+
+            <div class="logoResp">
+
+                {% if app.request.requestUri == '/drink/' %}
+                    <a href="https://34burger.fr/"><img class="logoBlocResp" id="blocLogo"
+                                                               src="{{ asset('build/images/frittesPanier.png') }}" alt="Logo 34 Burger"></a>
+                {% elseif app.request.requestUri == '/tacos/' %}
+                    <a href="https://34burger.fr/"><img class="logoBlocResp" id="blocLogo"
+                                                               src="{{ asset('build/images/tacosPanier.png') }}" alt="Logo 34 Burger"></a>
+                {% else %}
+                    <a href="https://34burger.fr/"><img class="logoBlocResp" id="blocLogo"
+                                                               src="{{ asset('build/images/burgerPanier.png') }}" alt="Logo 34 Burger"></a>
+                {% endif %}
+
+            </div>
+
+            <li><a href="{{ path('app_drink_index') }}">
+                    <img class="logoBlocResp" src="{{ asset('build/images/frittesPanier.png') }}" alt="">
+                </a></li>
+
+            <li><a href="{{ path('app_contact') }}">
+                    <img class="logoBlocResp" src="{{ asset('build/images/orderBurger.png') }}" alt="">
+                </a></li>
+        </ul>
+    </nav>
 </div>
 
 
-<script>
+ <script>
     const activePage = window.location.pathname
     const links = document.querySelectorAll('.burgertacos')
-    const test = document.querySelectorAll('.testBarre')
+    // const test = document.querySelectorAll('.testBarre')
 
     links.forEach(bloc => {
         // console.log(activePage)
         if (activePage !== "/") {
-        if (bloc.href.includes(activePage)) {
-            console.log("ok")
-            bloc.nextElementSibling.style.display = "block"
-        } else {
-            console.log("pouet")
-            bloc.nextElementSibling.style.display = "none"
-        }
+            if (bloc.href.includes(activePage)) {
+                console.log("ok")
+                bloc.nextElementSibling.style.display = "block"
+            } else {
+                console.log("pouet")
+                bloc.nextElementSibling.style.display = "none"
+            }
         }
     })
-</script>
+ </script>
+
+
+{#<script>#}
+{#    const menuItems = document.querySelectorAll('.menuResp li');#}
+
+{#    menuItems.forEach(function(item) {#}
+{#        item.addEventListener('click', function() {#}
+{#            // Récupérer l'URL actuelle#}
+{#            const currentUrl = window.location.href;#}
+
+{#            // Vérifier si l'URL contient "/drink/", "/tacos/" ou est égale à "/contact"#}
+{#            if (currentUrl.includes('/drink/')) {#}
+{#                item.style.backgroundColor = '#654321';#}
+{#            } else if (currentUrl.includes('/tacos/')) {#}
+{#                item.style.backgroundColor = '#654321';#}
+{#            } else if (currentUrl.includes('/burger/')) {#}
+{#                item.style.backgroundColor = '#654321';#}
+{#            } else if (currentUrl.includes('/contact/')) {#}
+{#                item.style.backgroundColor = '#654321';#}
+
+{#            } else {#}
+{#                item.style.backgroundColor = '#2B2A2BFF';#}
+{#            }#}
+{#        });#}
+{#    });#}
+{#</script>#}
 
 <script>
-    const logo = document.querySelector(".logoBloc")
+    // Récupération de l'URL actuelle de la page
+    const currentUrl = window.location.href;
+
+    // Sélection de tous les liens dans notre menu
+    const menuLinks = document.querySelectorAll('.menuRespBloc .menuResp li a');
+
+    // Pour chaque lien, on va vérifier s'il correspond à l'URL actuelle
+    menuLinks.forEach(link => {
+        if (link.href === currentUrl) {
+            // Si le lien correspond à l'URL actuelle, on ajoute la classe "active"
+            link.parentElement.classList.add('active');
+        }
+    });
+</script>
+
+
+<script>
+    const logo = document.querySelector(".logoBlocDesktop")
     // console.log(logo)
 
     window.addEventListener('scroll', () => {
         if (window.scrollY > 100) {
             console.log('test')
-            logo.classList.remove('logoBloc')
+            logo.classList.remove('logoBlocDesktop')
             logo.classList.add('miniSize')
         } else {
-            logo.classList.add('logoBloc')
+            logo.classList.add('logoBlocDesktop')
             logo.classList.remove('miniSize')
         }
     })
