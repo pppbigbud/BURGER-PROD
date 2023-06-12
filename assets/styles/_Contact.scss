@@ -5,7 +5,13 @@
   justify-content: center;
   flex-direction: column;
 
-  .AlignContact {
+  .titreContact {
+    font-family: "Comica Brush", sans-serif;
+    font-size: 10rem;
+    margin: 0;
+  }
+
+  .alignContact {
     width: 90%;
     height: auto;
     display: flex;
@@ -17,15 +23,23 @@
       width: 25%;
       height: auto;
       border-radius: 20px;
+      margin-top: 3vh;
+      margin-bottom: 3vh;
     }
 
     .alignContactTelEmail {
       flex-direction: column;
       margin-top: 5vh;
+      margin-left: 3vw;
 
-      .telContact{
+      .descriptionContactTxt {
+        font-size: xx-large;
+        font-weight: lighter;
+      }
+
+      .telContact {
         font-family: "Hey August", serif;
-        font-size: 10vh;
+        font-size: 5vw;
         color: white;
       }
     }
@@ -38,6 +52,11 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+    .descriptionContactTxt {
+      font-size: xx-large;
+      font-weight: lighter;
+    }
 
     iframe {
       width: 100%;
@@ -66,58 +85,27 @@
 
   .alignementBackgroundContact {
 
-    .AlignContact {
+    .alignContact {
       flex-direction: column;
 
       .imgPresentation34 {
         width: 50%;
         height: auto;
         border-radius: 20px;
-        margin-top: 5vh;
+        margin-top: 2vh;
       }
 
       .alignContactTelEmail {
         flex-direction: column;
         margin-top: 5vh;
 
-        .telContact{
+        .telContact {
           font-family: "Hey August", serif;
           font-size: 5vh;
           color: white;
+          margin-top: 2vh;
         }
       }
     }
-
-    .alignementCarte {
-      width: 90%;
-      height: auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-
-      iframe {
-        width: 100%;
-        height: 60vh;
-        background-color: hsl(0, 0%, 21%);
-        border-radius: 10px;
-        box-shadow: inset 0 0 0.5px 1px hsla(0, 0%,
-                100%, 0.075),
-          /* shadow ring 👇 */
-        0 0 0 1px hsla(0, 0%, 0%, 0.05),
-          /* multiple soft shadows 👇 */
-        0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
-        0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
-        0 3.5px 6px hsla(0, 0%, 0%, 0.09);
-        font-size: 1vw;
-        margin-top: 3vh;
-      }
-    }
   }
-
-  .telContact:hover {
-    cursor: pointer;
-  }
-
-
 }

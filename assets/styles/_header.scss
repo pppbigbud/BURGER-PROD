@@ -39,14 +39,14 @@
   height: auto;
 
   .logoBlocDesktop {
-    width: 75%;
+    width: 60%;
     height: auto;
     margin-top: 7vh;
     transition: width 0.2s, height 0.2s, transform 0.2s;
   }
 
   .miniSize {
-    width: 60%;
+    width: 50%;
     height: auto;
     margin-top: 7vh;
     transition: width 0.2s, height 0.2s, transform 0.2s;
@@ -75,7 +75,7 @@
     font-size: 2em;
     letter-spacing: 1px;
     color: white;
-    opacity: 0.85;
+    opacity: 0.70;
   }
 
   a:hover {
@@ -91,6 +91,11 @@
     margin-top: 2vh;
     transition: width 0.2s, height 0.2s, transform 0.2s;
   }
+  .LogoMarqueHeader{
+    opacity: 1;
+  }
+
+
 
   .miniSize {
     width: 8vw;

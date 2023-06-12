@@ -6,3 +6,29 @@
     font-family: "Hey August";
     src: url("../fonts/HeyAugust.ttf");
 }
+
+
+h1 {
+    animation: scale-in 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+@keyframes scale-in {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+p {
+    opacity: 0; /* commence avec l'opacité à 0 pour que le texte ne soit pas visible au chargement de la page */
+    animation: fade-in 1s ease-in-out forwards; /* applique l'animation fade-in avec une durée de 1 seconde et une accélération/décélération (ease-in-out) */
+}
+
+@keyframes fade-in {
+    0% { opacity: 0; } /* commence avec l'opacité à 0 */
+    100% { opacity: 1; } /* se termine avec l'opacité à 1 (pleinement visible) */
+}

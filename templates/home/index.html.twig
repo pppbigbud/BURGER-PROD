@@ -3,22 +3,120 @@
 {% block title %}Au 34 burger{% endblock %}
 
 {% block main %}
+    <div class="centrageHomeSlider">
+        <div class="alignementBackground">
 
-        <div class="container d-flex w-75">
-            <p class="text-muted">Découvrez notre nouveau restaurant fast-food à Saint-Remy sur Durolle (34 Av. Joseph Claussat,
-                63550 Saint-Rémy-sur-Durolle), ouvert du
-                mercredi au samedi à partir
-                de 18h30 et toute la journée du mercredi. Nous proposons une variété de délicieux burgers et tacos faits
-                maison à partir de viandes françaises de qualité et de fromages locaux d'Auvergne. Nous offrons
-                également
-                une option végétarienne pour les hamburgers et les tacos. Nous acceptons les chèques, les espèces et les
-                cartes bancaires. Venez découvrir notre savoureuse cuisine et notre service de qualité.
-                Nous avons hâte de vous accueillir chez nous.</p>
+            <div class="slider-container slider-1">
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+{#                        <div class="swiper-slide">#}
+{#                            <img class="imgSlide"#}
+{#                                 src="{{ asset('build/images/FermetureTemporaire.jpg') }}"#}
+{#                                 alt="Burger Auvergnat">#}
+{#                        </div>#}
+                        <div class="swiper-slide">
+                            <img class="imgSlide"
+                                 src="{{ asset('build/images/BurgerEmballe34BurgerHomeSlider.jpg') }}"
+                                 alt="Burger Auvergnat">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img class="imgSlide"
+                                 src="{{ asset('build/images/CuisinePrez.png') }}"
+                                 alt="Burger Auvergnat">
+                        </div>
+
+
+                        <div class="swiper-slide">
+                            <img class="imgSlide"
+                                 src="{{ asset('build/images/BurgerEmballeOuvert34BurgerHomeSlider.jpg') }}"
+                                 alt="Burger Auvergnat">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img class="imgSlide"
+                                 src="{{ asset('build/images/TacosPresentation.jpg') }}"
+                                 alt="Burger Auvergnat">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img class="imgSlide"
+                                 src="{{ asset('build/images/PresentationBurger34.png') }}"
+                                 alt="Burger Auvergnat">
+                        </div>
+
+                    </div>
+
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                    <!-- If we need scrollbar -->
+                    {#                    <div class="swiper-scrollbar"></div> #}
+                </div>
+            </div>
+
+            <div class="titreTacosAlignement">
+
+                <h1 class="titreIntroHome text-center text-white">AU 34 BURGER</h1>
+
+                <p class="presentationHome mt-2 mb-2 text-muted text-center">
+                    Venez découvrir votre nouveau restaurant fast-food à
+
+                    <i class="fa-solid fa-location-dot"></i><strong class="text-white opacity-50"> Saint-Remy sur
+                        Durolle</strong>
+
+                    (<em>34 Av. Joseph Claussat, 63550 Saint-Rémy-sur-Durolle</em>),
+
+                    <i class="fa-solid fa-clock"></i><strong class="text-white opacity-50"> ouvert du lundi au samedi
+                        à
+                        partir de 18h30 et toute la journée du mercredi</strong>.
+                </p>
+
+                <p class="presentationHome mt-2 mb-5 text-muted text-center">
+                    Nous proposons une large variété de délicieux burgers et tacos
+
+                    <i class="fa-solid fa-house"></i><strong class="text-white opacity-50"> faits maison (frites et
+                        pains)</strong>
+
+                    à partir de
+
+                    <i class="fa-regular fa-font-awesome"></i><strong class="text-white opacity-50"> viandes françaises
+                        de
+                        qualité</strong>
+
+                    et de
+
+                    <i class="fa-solid fa-cheese"></i><strong class="text-white opacity-50"> fromages locaux
+                        d'Auvergne</strong>.
+
+                    Nous offrons également une
+
+                    <i class="fa-solid fa-carrot"></i><strong class="text-white opacity-50"> option végétarienne pour
+                        les
+                        hamburgers et les tacos</strong>.
+                </p>
+
+            </div>
         </div>
-    <div class="alignburgerPresentation">
-        <a href="https://localhost:8000/burger/" class="burgerPresentation">
-            <img class="imgBurgerPresentation" src="{{ asset('build/images/burger/Test1.png') }}"
-                 alt="Au 34 burger présentation">
+    </div>
+
+    <div class="containerHomeSeparator">
+        <div class="separatorHomePage">
+            <h2 class="titreBurgerTacosDrink">Nos Spécialités </h2>
+            <div class="separatorSpeciality"></div>
+        </div>
+    </div>
+
+    <section class="alignburgerPresentation">
+        <a href="https://www.34burger.fr/burgers/" class="burgerPresentation">
+            <img class="imgBurgerPresentation" src="{{ asset('build/images/burger/Auvergnat.png') }}"
+                 alt="Burger Auvergnat">
             <div class="aligementTxtPresentation">
                 <h1 class="titre34Burger">BURGERS</h1>
                 <ul>
@@ -47,15 +145,14 @@
                         <p class="text-muted">Large Choix</p>
                         <p class="nbrBurgerIntro">x 11</p>
                     </li>
-
                 </ul>
             </div>
         </a>
-    </div>
+    </section>
 
-    <div class="alignburgerPresentation">
-        <a href="https://localhost:8000/tacos/" class="burgerPresentation">
-            <img class="imgTacosPresentation" src="{{ asset('build/images/TacosPresentation.png') }}"
+    <section class="alignburgerPresentation">
+        <a href="https://www.34burger.fr/tacos/" class="burgerPresentation">
+            <img class="imgTacosPresentation" src="{{ asset('build/images/TacosPresentationOk.png') }}"
                  alt="Au 34 burger présentation">
             <div class="aligementTxtPresentation">
                 <h1 class="titre34Burger">TACOS</h1>
@@ -76,24 +173,24 @@
                     </li>
 
                     <li>
-                        <p class="text-muted">Sauces</p>
+                        <p class="text-muted">Choix Sauces</p>
                         <p class="nbrBurgerIntro">x 8</p>
                     </li>
 
                     <li>
-                        <p class="text-muted">Fromages</p>
+                        <p class="text-muted">Choix Fromages</p>
                         <p class="nbrBurgerIntro">x 7</p>
                     </li>
 
                 </ul>
             </div>
         </a>
-    </div>
+    </section>
 
-    <div class="alignburgerPresentation">
-        <a href="https://localhost:8000/drink/" class="burgerPresentation">
+    <section class="alignburgerPresentation">
+        <a href="https://www.34burger.fr/drink/" class="burgerPresentation">
             <img class="imgDrinkPresentation" src="{{ asset('build/images/drink/BoissonVisuel.png') }}"
-                 alt="Au 34 burger présentation">
+                 alt="Boissons">
             <div class="aligementTxtPresentation">
                 <h1 class="titre34Burger">BOISSONS</h1>
                 <ul>
@@ -103,6 +200,22 @@
                 </ul>
             </div>
         </a>
+    </section>
+
+    <div class="containerHomeSeparatorContact">
+        <div class="separatorHomePageContact">
+            <h2 class="titreBurgerTacosDrinkContact">Nos Coordonnées </h2>
+            <div class="separatorContact"></div>
+        </div>
     </div>
 
+    <div class="containerPlanHomePage">
+        <div class="alignementHomePagePlan">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2777.120840798012!2d3.593091315777351!3d45.88889621302481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f6bfa8959dd6f5%3A0x3d40949f594f5505!2sAu%2034%20burger%20%C3%A0%20emporter!5e0!3m2!1sfr!2sfr!4v1674486589406!5m2!1sfr!2sfr"
+                    width="500px" height="500px" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+
+            </iframe>
+        </div>
+    </div>
 {% endblock %}

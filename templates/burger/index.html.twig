@@ -5,7 +5,8 @@
 {% block main %}
     <div class="titreBurgerCentrage">
         <h1 class="titreBurger text-white">BURGERS</h1>
-        <p class="descriptionTacos mt-2 mb-5 text-muted text-center w-75">Venez déguster nos savoureux <i class="fa-solid fa-burger"></i><strong class="text-white opacity-50"> burgers faits maison</strong> à
+
+        <p class="descriptionBurger mt-2 mb-5 text-muted text-center w-75">Venez déguster nos savoureux <i class="fa-solid fa-burger"></i><strong class="text-white opacity-50"> burgers faits maison</strong> à
             partir de <i class="fa-solid fa-drumstick-bite"></i><strong class="text-white opacity-50"> viandes françaises</strong> et avec
             <br>
             des <i class="fa-solid fa-cheese"></i><strong class="text-white opacity-50"> fromages locaux d'Auvergne</strong>
@@ -35,46 +36,46 @@
 
     </div>
 
-    <script>
-        // Au chargement de la page je charge ma fonction
-        window.addEventListener('load', () => {
-            setUpClickEventAddItem();
-        });
+{#    <script>#}
+{#        // Au chargement de la page je charge ma fonction#}
+{#        window.addEventListener('load', () => {#}
+{#            setUpClickEventAddItem();#}
+{#        });#}
 
-        //fonctions quand je clic
-        function setUpClickEventAddItem() {
-            //Écoute element grace à un data-attribute
-            //(et par sécurité pour éviter les injections)
-            let addToCartBTN = document.querySelectorAll('[data-add-burger-cart]');
-            //Boucle sur le tableau data-attribute
-            addToCartBTN.forEach(btn => {
-                btn.addEventListener('click', function () {
-                    const burgerId = btn.getAttribute('data-add-burger-cart');
-                    const isChecked = document.querySelector("[data-add-frie='" + burgerId + "']").checked;
+{#        //fonctions quand je clic#}
+{#        function setUpClickEventAddItem() {#}
+{#            //Écoute element grace à un data-attribute#}
+{#            //(et par sécurité pour éviter les injections)#}
+{#            let addToCartBTN = document.querySelectorAll('[data-add-burger-cart]');#}
+{#            //Boucle sur le tableau data-attribute#}
+{#            addToCartBTN.forEach(btn => {#}
+{#                btn.addEventListener('click', function () {#}
+{#                    const burgerId = btn.getAttribute('data-add-burger-cart');#}
+{#                    const isChecked = document.querySelector("[data-add-frie='" + burgerId + "']").checked;#}
 
-                    const data = {
-                        burgerId,
-                        'fries': isChecked,
-                    };
+{#                    const data = {#}
+{#                        burgerId,#}
+{#                        'fries': isChecked,#}
+{#                    };#}
 
-                    flasher.success("Votre Burger à bien été ajouté!")
+{#                    flasher.success("Votre Burger à bien été ajouté!")#}
 
-                    fetch('/addBurgerToCart/' + JSON.stringify(data))
-                        .then((response) => {
-                            return response.json();
-                        })
-                        .then(res => {
-                            const burgerCart = document.querySelector("[data-cart-burger]");
+{#                    fetch('/addBurgerToCart/' + JSON.stringify(data))#}
+{#                        .then((response) => {#}
+{#                            return response.json();#}
+{#                        })#}
+{#                        .then(res => {#}
+{#                            const burgerCart = document.querySelector("[data-cart-burger]");#}
 
-                            const newQty = parseInt(res.newQty);
-                            burgerCart.classList.toggle('d-none', newQty === 0);
+{#                            const newQty = parseInt(res.newQty);#}
+{#                            burgerCart.classList.toggle('d-none', newQty === 0);#}
 
-                            const rondQtyBurger = burgerCart.querySelector('.rondPriceBurger');
-                            rondQtyBurger.innerText = newQty;
-                        })
-                })
-            })
-        }
-    </script>
+{#                            const rondQtyBurger = burgerCart.querySelector('.rondPriceBurger');#}
+{#                            rondQtyBurger.innerText = newQty;#}
+{#                        })#}
+{#                })#}
+{#            })#}
+{#        }#}
+{#    </script>#}
 
 {% endblock %}

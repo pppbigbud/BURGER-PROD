@@ -16,7 +16,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/burger')]
+#[Route('/burgers')]
 class BurgerController extends AbstractController
 {
     #[Route('/', name: 'app_burger_index', methods: ['GET'])]

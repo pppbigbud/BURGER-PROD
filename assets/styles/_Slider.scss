@@ -1,0 +1,138 @@
+.centrageHomeSlider {
+  width: 100%;
+  min-height: 85vh;
+  display: flex;
+  align-content: center;
+
+  .alignementBackground {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5vh;
+
+    .slider-1 {
+      max-width: 600px;
+      overflow: hidden;
+      margin: 0 0 0 10vw;
+      background-color: hsl(0, 0%, 21%);
+      border-radius: 10px;
+      box-shadow: inset 0 0 0.5px 1px hsla(0, 0%,
+              100%, 0.075),
+        /* shadow ring 👇 */
+      0 0 0 1px hsla(0, 0%, 0%, 0.05),
+        /* multiple soft shadows 👇 */
+      0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+      0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
+      0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+
+      .slider {
+        display: flex;
+        flex-direction: row-reverse;
+        animation: slider-1 15s infinite ease-in-out;
+
+        p {
+          flex-shrink: 0;
+          width: 100%;
+          text-align: center;
+          font-size: 45px;
+          color: white;
+        }
+      }
+    }
+
+    .titreTacosAlignement {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin-left: 5vw;
+      margin-right: 3vw;
+
+      .titreIntroHome {
+        font-family: "Hey August", sans-serif;
+        font-size: 5rem;
+        margin-bottom: 5vh;
+      }
+
+      .presentationHome {
+        font-size: x-large;
+      }
+    }
+  }
+}
+
+/*
+   5% par transition, nombre choisi arbitrairement.
+   reste divisé par nb de pauses
+   80(%) / 4 = 20(%) par pause
+*/
+
+@keyframes slider-1 {
+  0%,
+  20% {
+    transform: translateX(0);
+  }
+  25%,
+  45% {
+    transform: translateX(100%);
+  }
+  50%,
+  70% {
+    transform: translateX(200%);
+  }
+  75%,
+  95% {
+    transform: translateX(300%);
+  }
+  100% {
+    transform: translateX(400%);
+  }
+}
+
+@media (max-width: 1100px) {
+
+  .centrageHomeSlider {
+    display: flex;
+    justify-content: center;
+    min-height: 0;
+    position: relative;
+    top: -200px;
+    width: 100%;
+
+    .alignementBackground {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: -200px;
+
+      .slider-1 {
+        min-width: 100vw;
+        height: auto;
+        margin: 0;
+
+        .slider {
+
+          p {
+
+            img {
+              width: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+
+      .titreTacosAlignement {
+        width: 100%;
+        flex-direction: column;
+        margin-top: 4vh;
+
+        .titreIntroHome {
+          margin-bottom: 2vh;
+        }
+
+        .presentationHome {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}

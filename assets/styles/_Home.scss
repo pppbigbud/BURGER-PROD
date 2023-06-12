@@ -2,6 +2,117 @@
   box-sizing: border-box;
 }
 
+.centrageHomeSlider {
+  width: 100vw  ;
+  margin-bottom: 5vh;
+
+  // Partie slider
+  .alignementBackground {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .swiper {
+      width: 500px;
+      height: auto;
+      border-radius: 30px;
+
+      .imgSlide {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      .swiper-button-prev {
+        color: #ff9400;
+        margin-left: 5px;
+      }
+
+      .swiper-button-next {
+        color: #ff9400;
+        margin-right: 5px;
+      }
+
+      .swiper-pagination-bullet-active {
+        opacity: 1;
+        background-color: #ff9400;
+      }
+    }
+  }
+
+  // Partie écrite
+
+  .titreTacosAlignement {
+    width: 30%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 50px 0 50px;
+
+    .titreIntroHome {
+      font-size: 5vw;
+    }
+
+    .presentationHome {
+      font-size: 1.5rem;
+
+    }
+  }
+}
+
+
+//.centrageHomeSlider {
+//  width: 100%;
+//  display: flex;
+//  align-items: center;
+//  justify-content: center;
+//}
+//
+//.alignementBackground {
+//  width: 90%;
+//  align-items: center;
+//  justify-content: center;
+//}
+//
+//.slider-container {
+//  width: 50%;
+//  height: auto;
+//}
+//
+//.slider-container .swiper-slide img {
+//  width: 100%;
+//  height: auto;
+//  object-fit: cover;
+//  object-position: center;
+//}
+//
+//.titreTacosAlignement {
+//  width: 50%;
+//  height: auto;
+//}
+//
+////Couleur des flèches du slider
+//
+//.swiper-button-prev {
+//  color: #ff9400;
+//  margin-left: 5px;
+//}
+//
+//.swiper-button-next {
+//  color: #ff9400;
+//  margin-right: 5px;
+//}
+//
+//.swiper-pagination-bullet-active {
+//  opacity: 1;
+//  background-color: #ff9400;
+//}
+
+
 .alignburgerPresentation {
   display: flex;
   align-items: center;
@@ -53,7 +164,6 @@
       .titre34Burger {
         width: auto;
         height: 50%;
-        display: flex;
         align-items: flex-end;
         justify-content: center;
         font-family: "Comica Brush", serif;
@@ -61,6 +171,10 @@
         margin-bottom: 0;
         margin-top: 3vh;
         color: white;
+      }
+
+      .titre34Burger {
+        display: flex;
       }
 
       ul {
@@ -95,6 +209,105 @@
   }
 }
 
+.containerHomeSeparator {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+
+  .separatorHomePage {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 75%;
+    height: auto;
+
+    .titreBurgerTacosDrink {
+      font-size: 5rem;
+      color: white;
+    }
+
+    .separatorSpeciality {
+      width: 60%;
+      height: 3px;
+      border-radius: 1px;
+      background-color: white;
+      opacity: 0.5;
+      margin-left: 5vw;
+    }
+
+    .separatorContact {
+      width: 50%;
+      height: 3px;
+      border-radius: 1px;
+      background-color: white;
+      opacity: 0.5;
+      margin-left: 5vw;
+    }
+  }
+}
+
+.containerHomeSeparatorContact {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+
+  .separatorHomePageContact {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 75%;
+    height: auto;
+
+    .titreBurgerTacosDrinkContact {
+      font-size: 5rem;
+      color: white;
+    }
+
+    .separatorContact {
+      width: 50%;
+      height: 3px;
+      border-radius: 1px;
+      background-color: white;
+      opacity: 0.5;
+      margin-left: 5vw;
+    }
+  }
+}
+
+.containerPlanHomePage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .alignementHomePagePlan {
+    width: 90%;
+    height: auto;
+
+    iframe {
+      width: 100%;
+      //height: 60vh;
+      background-color: hsl(0, 0%, 21%);
+      border-radius: 10px;
+      box-shadow: inset 0 0 0.5px 1px hsla(0, 0%,
+              100%, 0.075),
+        /* shadow ring 👇 */
+      0 0 0 1px hsla(0, 0%, 0%, 0.05),
+        /* multiple soft shadows 👇 */
+      0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+      0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
+      0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+      font-size: 1vw;
+      margin-top: 3vh;
+    }
+  }
+}
+
+
 .burgerPresentation:hover {
   transition-duration: 0.5s;
   cursor: pointer;
@@ -104,6 +317,47 @@
 
 
 @media (max-width: 1100px) {
+  .centrageHomeSlider {
+    width: 100vw;
+    height: auto;
+    margin-bottom: 5vh;
+
+    // Partie slider
+    .alignementBackground {
+      width: 100vw;
+      height: auto;
+      flex-direction: column;
+      margin-top: -9vh;
+
+      .swiper {
+        width: 100vw;
+        height: auto;
+        border-radius: 0;
+      }
+    }
+
+    // Partie écrite
+
+    .titreTacosAlignement {
+      width: 90%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 3vh 50px 0 50px;
+
+      .titreIntroHome {
+        font-size: 10vw;
+      }
+
+      .presentationHome {
+        font-size: 1.5rem;
+
+      }
+    }
+  }
+
   .alignburgerPresentation {
     display: flex;
     align-items: center;
@@ -200,6 +454,37 @@
       }
     }
   }
+
+  .containerHomeSeparator {
+    margin-top: 5vh;
+
+    .separatorHomePage {
+
+      .titreBurgerTacosDrink {
+        font-size: 4rem;
+      }
+
+      .separatorSpeciality {
+        width: 40%;
+      }
+    }
+  }
+
+  .containerHomeSeparatorContact {
+    margin-top: 5vh;
+
+    .separatorHomePageContact {
+
+      .titreBurgerTacosDrinkContact {
+        font-size: 4rem;
+      }
+
+      .separatorContact {
+        width: 30%;
+      }
+    }
+  }
+
 
   .burgerPresentation:hover {
     opacity: 1;

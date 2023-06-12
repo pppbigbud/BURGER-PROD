@@ -33,6 +33,7 @@
     "@fullcalendar/daygrid": "^5.11.3",
     "@fullcalendar/moment": "^5.11.3",
     "bootstrap": "^5.2.2",
-    "fullcalendar": "^5.11.3"
+    "fullcalendar": "^5.11.3",
+    "swiper": "^9.3.2"
   }
 }

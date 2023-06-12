@@ -1,5 +1,5 @@
 <div class="headerCenter">
-    <div class="headerBackground">
+    <nav class="headerBackground">
 
         <div class="blocMenu backHeaderBurger">
             <a href="{{ path('app_burger_index') }}" class="burgertacos">
@@ -22,19 +22,19 @@
         <div class="blocMenu logoHeader" id="test">
 
             {% if app.request.requestUri == '/drink/' %}
-                <a href="https://34burger.fr/"><img class="logoBlocDesktop" id="blocLogo"
-                                                       src="{{ asset('build/images/frittesPanier.png') }}"
-                                                       alt="Logo 34 Burger">
+                <a href="https://34burger.fr/" class="LogoMarqueHeader mt-2 mb-2"><img class="logoBlocDesktop" id="blocLogo"
+                                                                             src="{{ asset('build/images/frittesPanier.png') }}"
+                                                                             alt="Logo 34 Burger">
                 </a>
             {% elseif app.request.requestUri == '/tacos/' %}
-                <a href="https://34burger.fr/"><img class="logoBlocDesktop" id="blocLogo"
-                                                       src="{{ asset('build/images/tacosPanier.png') }}"
-                                                       alt="Logo 34 Burger">
+                <a href="https://34burger.fr/" class="LogoMarqueHeader"><img class="logoBlocDesktop" id="blocLogo"
+                                                                             src="{{ asset('build/images/tacosPanier.png') }}"
+                                                                             alt="Logo 34 Burger">
                 </a>
             {% else %}
-                <a href="https://34burger.fr/"><img class="logoBlocDesktop" id="blocLogo"
-                                                       src="{{ asset('build/images/burgerPanier.png') }}"
-                                                       alt="Logo 34 Burger">
+                <a href="https://34burger.fr/" class="LogoMarqueHeader"><img class="logoBlocDesktop" id="blocLogo"
+                                                                             src="{{ asset('build/images/burgerPanier.png') }}"
+                                                                             alt="Logo 34 Burger">
                 </a>
             {% endif %}
 
@@ -58,7 +58,7 @@
             </a>
             <div class="testBarre"></div>
         </div>
-    </div>
+    </nav>
 </div>
 
 {#- ----------------------------MENU RESPONSIVE----------------------------- -#}
@@ -66,11 +66,11 @@
 <div class="menuRespBloc">
     <nav class="navResp">
         <ul class="menuResp">
-            <li><a href="{{ path('app_burger_index') }}">
+            <li><a href="{{ path('app_burger_index') }}" class="btnMenu">
                     <img class="logoBlocResp" src="{{ asset('build/images/burgerPanier.png') }}" alt="">
                 </a></li>
 
-            <li><a href="{{ path('app_tacos_index') }}">
+            <li><a href="{{ path('app_tacos_index') }}" class="btnMenu">
                     <img class="logoBlocResp" src="{{ asset('build/images/tacosPanier.png') }}" alt="">
                 </a></li>
 
@@ -78,73 +78,105 @@
 
                 {% if app.request.requestUri == '/drink/' %}
                     <a href="https://34burger.fr/"><img class="logoBlocResp" id="blocLogo"
-                                                               src="{{ asset('build/images/frittesPanier.png') }}" alt="Logo 34 Burger"></a>
+                                                        src="{{ asset('build/images/frittesPanier.png') }}"
+                                                        alt="Logo 34 Burger"></a>
                 {% elseif app.request.requestUri == '/tacos/' %}
                     <a href="https://34burger.fr/"><img class="logoBlocResp" id="blocLogo"
-                                                               src="{{ asset('build/images/tacosPanier.png') }}" alt="Logo 34 Burger"></a>
+                                                        src="{{ asset('build/images/tacosPanier.png') }}"
+                                                        alt="Logo 34 Burger"></a>
                 {% else %}
                     <a href="https://34burger.fr/"><img class="logoBlocResp" id="blocLogo"
-                                                               src="{{ asset('build/images/burgerPanier.png') }}" alt="Logo 34 Burger"></a>
+                                                        src="{{ asset('build/images/burgerPanier.png') }}"
+                                                        alt="Logo 34 Burger"></a>
                 {% endif %}
 
             </div>
 
-            <li><a href="{{ path('app_drink_index') }}">
+            <li><a href="{{ path('app_drink_index') }}" class="btnMenu">
                     <img class="logoBlocResp" src="{{ asset('build/images/frittesPanier.png') }}" alt="">
                 </a></li>
 
-            <li><a href="{{ path('app_contact') }}">
+            <li><a href="{{ path('app_contact') }}" class="btnMenu">
                     <img class="logoBlocResp" src="{{ asset('build/images/orderBurger.png') }}" alt="">
                 </a></li>
         </ul>
     </nav>
 </div>
 
+<script>
+    // Sélectionnez la div "testbarre"
+    const testbarre = document.querySelector('.testbarre');
 
- <script>
+    // Ajoutez un événement de souris à l'élément HTML
+    document.addEventListener('mousemove', e => {
+// Calculez la position de la souris par rapport à la fenêtre
+        const x = e.clientX;
+
+// Définissez la position de la div en utilisant la propriété "left" de CSS
+        testbarre.style.left = `${x}px`;
+    });
+</script>
+
+<script>
     const activePage = window.location.pathname
     const links = document.querySelectorAll('.burgertacos')
-    // const test = document.querySelectorAll('.testBarre')
 
     links.forEach(bloc => {
-        // console.log(activePage)
+        // changement d'opacité en fonction au :hover
+        bloc.addEventListener('mouseover', () => {
+            bloc.style.opacity = "1";
+        });
+        bloc.addEventListener('mouseout', () => {
+            bloc.style.opacity = "0.75";
+        });
+
+        // condition pour vérifier la page active
         if (activePage !== "/") {
             if (bloc.href.includes(activePage)) {
-                console.log("ok")
+                //Si page active alors l'élement (barre orange) apparait
                 bloc.nextElementSibling.style.display = "block"
+                //Egalement l'opacité passe a 100%
+                bloc.style.opacity = "1";
+                //Au hover l'opacité reste a 100% si lien actif
+                bloc.addEventListener('mouseout', () => {
+                    bloc.style.opacity = "1";
+                });
+
             } else {
-                console.log("pouet")
+                //Si page active alors l'élement (barre orange) n'est pas présent
                 bloc.nextElementSibling.style.display = "none"
+                //Egalement l'opacité passe a 75%
+                bloc.style.opacity = "0.75";
             }
         }
     })
- </script>
+</script>
 
 
-{#<script>#}
-{#    const menuItems = document.querySelectorAll('.menuResp li');#}
+{# <script> #}
+{#    const menuItems = document.querySelectorAll('.menuResp li'); #}
 
-{#    menuItems.forEach(function(item) {#}
-{#        item.addEventListener('click', function() {#}
-{#            // Récupérer l'URL actuelle#}
-{#            const currentUrl = window.location.href;#}
+{#    menuItems.forEach(function(item) { #}
+{#        item.addEventListener('click', function() { #}
+{#            // Récupérer l'URL actuelle #}
+{#            const currentUrl = window.location.href; #}
 
-{#            // Vérifier si l'URL contient "/drink/", "/tacos/" ou est égale à "/contact"#}
-{#            if (currentUrl.includes('/drink/')) {#}
-{#                item.style.backgroundColor = '#654321';#}
-{#            } else if (currentUrl.includes('/tacos/')) {#}
-{#                item.style.backgroundColor = '#654321';#}
-{#            } else if (currentUrl.includes('/burger/')) {#}
-{#                item.style.backgroundColor = '#654321';#}
-{#            } else if (currentUrl.includes('/contact/')) {#}
-{#                item.style.backgroundColor = '#654321';#}
+{#            // Vérifier si l'URL contient "/drink/", "/tacos/" ou est égale à "/contact" #}
+{#            if (currentUrl.includes('/drink/')) { #}
+{#                item.style.backgroundColor = '#654321'; #}
+{#            } else if (currentUrl.includes('/tacos/')) { #}
+{#                item.style.backgroundColor = '#654321'; #}
+{#            } else if (currentUrl.includes('/burger/')) { #}
+{#                item.style.backgroundColor = '#654321'; #}
+{#            } else if (currentUrl.includes('/contact/')) { #}
+{#                item.style.backgroundColor = '#654321'; #}
 
-{#            } else {#}
-{#                item.style.backgroundColor = '#2B2A2BFF';#}
-{#            }#}
-{#        });#}
-{#    });#}
-{#</script>#}
+{#            } else { #}
+{#                item.style.backgroundColor = '#2B2A2BFF'; #}
+{#            } #}
+{#        }); #}
+{#    }); #}
+{# </script> #}
 
 <script>
     // Récupération de l'URL actuelle de la page
@@ -152,6 +184,8 @@
 
     // Sélection de tous les liens dans notre menu
     const menuLinks = document.querySelectorAll('.menuRespBloc .menuResp li a');
+    let menuTexts = document.getElementById("opacityTextMenu")
+    console.log(menuTexts)
 
     // Pour chaque lien, on va vérifier s'il correspond à l'URL actuelle
     menuLinks.forEach(link => {
@@ -169,7 +203,7 @@
 
     window.addEventListener('scroll', () => {
         if (window.scrollY > 100) {
-            console.log('test')
+
             logo.classList.remove('logoBlocDesktop')
             logo.classList.add('miniSize')
         } else {

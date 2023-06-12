@@ -4,264 +4,273 @@
 
 {% block main %}
 
-    <div class="alignementBackground">
-
-    <div class="titreTacosAlignement">
+    <div class="titreTacosCentrage">
         <h1 class="titreTacos text-white">TACOS</h1>
+
         <p class="descriptionTacos mt-2 mb-5 text-muted text-center w-75">
             Découvrez nos délicieux <i class="fa-solid fa-utensils"></i><strong class="text-white opacity-50">
-            tacos</strong> faits maison avec des ingrédients de qualité dans notre nouveau restaurant
-            fast-food à <i class="fa-solid fa-location-dot"></i><strong class="text-white opacity-50"> Saint-Remy sur Durolle</strong>.
+                tacos</strong> faits maison avec des ingrédients de qualité dans votre nouveau restaurant
+            fast-food à <i class="fa-solid fa-location-dot"></i><strong class="text-white opacity-50"> Saint-Remy sur
+                Durolle</strong>.
             Nous offrons une variété d'options pour personnaliser votre tacos selon
-            vos goûts et vos préférences, avec des viandes de qualité supérieure et des <i class="fa-solid fa-cheese"></i><strong class="text-white opacity-50"> fromages locaux d'Auvergne</strong>
-            pour une expérience gustative inoubliable. Ci-dessous, vous trouverez toutes <strong class="text-white opacity-50">les possibilités offertes pour
-            personnaliser votre tacos ainsi que les prix correspondants</strong>. Tous nos tacos sont servis avec des <strong class="text-white opacity-50">crudités ou
-            des frites au choix</strong>."</p>
-
-
+            vos goûts et vos préférences, avec des viandes de qualité supérieure et des <i
+                    class="fa-solid fa-cheese"></i><strong class="text-white opacity-50"> fromages locaux
+                d'Auvergne</strong>.
+            <br>Ci-dessous, vous trouverez toutes <strong class="text-white opacity-50">les possibilités offertes pour
+                personnaliser votre tacos ainsi que les prix correspondants</strong>. Tous nos tacos sont servis avec
+            des <strong class="text-white opacity-50">crudités ou
+                des frites au choix</strong>.</p>
     </div>
 
-    <div class="backgroundTacosConfig  p-3">
+    <div class="tableTacosCentrage">
+        <div class="containerAlignementTableTacos">
+            <div class="d-flex flex-column p-3">
 
-        <table class="table align-middle mb-0 bg-transparent">
-            <thead class="bg-transparent">
-            <tr>
-                <th class="d-flex justify-content-end"><img src="{{ asset('build/images/tacosSize.png') }}" alt="tacos"
-                                                            class="imageSizeFormTacos p-1"></th>
-                <th><h2 class="text-white text-center">L</h2></th>
-                <th><h2 class="text-white text-center">XL</h2></th>
-                <th><h2 class="text-white text-center">XXL</h2></th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>
+                <table class="table align-middle mb-0 bg-transparent">
+                    <thead class="bg-transparent">
+                    <tr>
+                        <th class="d-flex justify-content-end"><img src="{{ asset('build/images/tacosSize.png') }}"
+                                                                    alt="tacos"
+                                                                    class="imageSizeFormTacos p-1"></th>
+                        <th><h2 class="text-white text-center">L</h2></th>
+                        <th><h2 class="text-white text-center">XL</h2></th>
+                        <th><h2 class="text-white text-center">XXL</h2></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
 
-                    <div class="d-flex flex-row align-items-center ms-3">
-                        <img src="{{ asset('build/images/Beef.png') }}" alt="tacos"
-                             class="imageSauceFormTacos p-1">
-                        <h3 class="fw-normal mb-1 text-white text-center p-1">Boeuf</h3>
-                        <p class="text-muted p-1">Viande de bœuf haché // // ( Salade, Tomate, Oignon ) ou frites</p>
+                            <div class="d-flex flex-row align-items-center ms-3">
+                                <img src="{{ asset('build/images/Beef.png') }}" alt="tacos"
+                                     class="imageSauceFormTacos p-1">
+                                <h3 class="fw-normal mb-1 text-white text-center p-1">Boeuf</h3>
+                                <p class="tacosDescriptionTxt text-muted p-1">Viande de bœuf haché // ( Salade, Tomate, Oignon ) ou
+                                    frites</p>
+                            </div>
+
+                        </td>
+                        <td>
+                            <p class="tarifTacos text-white text-center">7€</p>
+                        </td>
+                        <td>
+                            <p class="tarifTacos text-white text-center">8.5€</p>
+                        </td>
+                        <td>
+                            <p class="tarifTacos text-white text-center">10€</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+
+                            <div class="d-flex flex-row align-items-center ms-3">
+                                <img src="{{ asset('build/images/Chiken.png') }}" alt="tacos"
+                                     class="imageSauceFormTacos p-1">
+                                <h3 class="fw-normal mb-1 text-white text-center p-1">Poulet</h3>
+                                <p class="tacosDescriptionTxt text-muted p-1">Poulet mariné // ( Salade, Tomate, Oignon ) ou frites</p>
+                            </div>
+
+                        </td>
+                        <td>
+                            <p class="tarifTacos text-white text-center">7€</p>
+                        </td>
+                        <td>
+                            <p class="tarifTacos text-white text-center">8.5€</p>
+                        </td>
+                        <td>
+                            <p class="tarifTacos text-white text-center">10€</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+
+
+                            <div class="d-flex flex-row align-items-center ms-3">
+                                <img src="{{ asset('build/images/Carotte.png') }}" alt="tacos"
+                                     class="imageSauceFormTacos p-1">
+                                <h3 class="fw-normal mb-1 text-white text-center p-1">Végétarien</h3>
+                                <p class="tacosDescriptionTxt text-muted p-1">Galette de pomme de terre // ( Salade, Tomate, Oignon ) ou
+                                    frites</p>
+                            </div>
+
+                        </td>
+                        <td>
+                            <p class="tarifTacos text-white text-center">5.5€</p>
+                        </td>
+                        <td>
+                            <p class="tarifTacos text-white text-center">7€</p>
+                        </td>
+                        <td>
+                            <p class="tarifTacos text-white text-center">8.5€</p>
+                        </td>
+                    </tr>
+
+
+                    </tbody>
+                </table>
+
+                <div class="alignementFromageSauce d-flex flex-row justify-content-center">
+
+                    <div class="alignementFromageSauce d-flex flex-column">
+                        <div class="centrageTitre d-flex justify-content-center">
+                            <div class="d-flex flex-row justify-content-center align-items-center ms-3">
+                                <img src="{{ asset('build/images/cheeseTacosConfig.png') }}" alt="tacos"
+                                     class="imageSauceFormSauceCheese p-1">
+                                <h3 class="fw-normal mb-1 text-white text-center p-1">Fromages</h3>
+                            </div>
+                        </div>
+
+                        <ul class="text-center">
+                            <li class="tacosDescriptionTxt text-muted p-1">Cheddar</li>
+                            <li class="tacosDescriptionTxt text-muted p-1">Emmental</li>
+                            <li class="tacosDescriptionTxt text-muted p-1">Saint-Nectaire</li>
+                            <li class="tacosDescriptionTxt text-muted p-1">Bleu d'Auvergne</li>
+                            <li class="tacosDescriptionTxt text-muted p-1">Chèvre</li>
+                            <li class="tacosDescriptionTxt text-muted p-1">Reblochon</li>
+                            <li class="tacosDescriptionTxt text-muted p-1">Raclette</li>
+                            <li class="tacosDescriptionTxt text-muted p-1">Cantal</li>
+                        </ul>
                     </div>
 
-                </td>
-                <td>
-                    <p class="tarifTacos text-white text-center">7€</p>
-                </td>
-                <td>
-                    <p class="tarifTacos text-white text-center">8.5€</p>
-                </td>
-                <td>
-                    <p class="tarifTacos text-white text-center">10€</p>
-                </td>
-            </tr>
-            <tr>
-                <td>
+                    <div class="alignementFromageSauce d-flex flex-column">
+                        <div class="centrageTitre d-flex justify-content-center">
+                            <div class="d-flex flex-row justify-content-center align-items-center ms-3">
+                                <img src="{{ asset('build/images/sauceTacos.png') }}" alt="tacos"
+                                     class="imageSauceFormSauceCheese p-1 mt-2">
+                                <h3 class="fw-normal mb-1 text-white text-center p-1">Sauces</h3>
+                            </div>
+                        </div>
 
-                    <div class="d-flex flex-row align-items-center ms-3">
-                        <img src="{{ asset('build/images/Chiken.png') }}" alt="tacos"
-                             class="imageSauceFormTacos p-1">
-                        <h3 class="fw-normal mb-1 text-white text-center p-1">Poulet</h3>
-                        <p class="text-muted p-1">Poulet mariné // // ( Salade, Tomate, Oignon ) ou frites</p>
-                    </div>
-
-                </td>
-                <td>
-                    <p class="tarifTacos text-white text-center">7€</p>
-                </td>
-                <td>
-                    <p class="tarifTacos text-white text-center">8.5€</p>
-                </td>
-                <td>
-                    <p class="tarifTacos text-white text-center">10€</p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-
-
-                    <div class="d-flex flex-row align-items-center ms-3">
-                        <img src="{{ asset('build/images/Carotte.png') }}" alt="tacos"
-                             class="imageSauceFormTacos p-1">
-                        <h3 class="fw-normal mb-1 text-white text-center p-1">Végétarien</h3>
-                        <p class="text-muted p-1">Galette de pomme de terre // ( Salade, Tomate, Oignon ) ou frites</p>
-                    </div>
-
-                </td>
-                <td>
-                    <p class="tarifTacos text-white text-center">5.5€</p>
-                </td>
-                <td>
-                    <p class="tarifTacos text-white text-center">7€</p>
-                </td>
-                <td>
-                    <p class="tarifTacos text-white text-center">8.5€</p>
-                </td>
-            </tr>
-
-
-            </tbody>
-        </table>
-
-        <div class="alignementFromageSauce d-flex flex-row justify-content-center">
-
-            <div class="alignementFromageSauce d-flex flex-column">
-                <div class="centrageTitre d-flex justify-content-center">
-                    <div class="d-flex flex-row justify-content-center align-items-center ms-3">
-                        <img src="{{ asset('build/images/cheeseTacosConfig.png') }}" alt="tacos"
-                             class="imageSauceFormSauceCheese p-1">
-                        <h3 class="fw-normal mb-1 text-white text-center p-1">Fromages</h3>
+                        <ul class="text-center">
+                            <li class="tacosDescriptionTxt text-muted p-1">Mayonnaise</li>
+                            <li class="tacosDescriptionTxt text-muted p-1">Ketchup</li>
+                            <li class="tacosDescriptionTxt text-muted p-1">Moutarde</li>
+                            <li class="tacosDescriptionTxt text-muted p-1">Barbecue</li>
+                            <li class="tacosDescriptionTxt text-muted p-1">Moutarde à l'ancienne</li>
+                            <li class="tacosDescriptionTxt text-muted p-1">Algérienne</li>
+                            <li class="tacosDescriptionTxt text-muted p-1">Samouraï</li>
+                            <li class="tacosDescriptionTxt text-muted p-1">Hamburger</li>
+                            <li class="tacosDescriptionTxt text-muted p-1">Tartare</li>
+                        </ul>
                     </div>
                 </div>
-
-                <ul class="text-center">
-                    <li class="text-muted p-1">Cheddar</li>
-                    <li class="text-muted p-1">Emmental</li>
-                    <li class="text-muted p-1">Bleu d'Auvergne</li>
-                    <li class="text-muted p-1">Chèvre</li>
-                    <li class="text-muted p-1">Reblochon</li>
-                    <li class="text-muted p-1">Raclette</li>
-                    <li class="text-muted p-1">Cantal</li>
-                </ul>
             </div>
-
-            <div class="alignementFromageSauce d-flex flex-column">
-                <div class="centrageTitre d-flex justify-content-center">
-                    <div class="d-flex flex-row justify-content-center align-items-center ms-3">
-                        <img src="{{ asset('build/images/sauceTacos.png') }}" alt="tacos"
-                             class="imageSauceFormSauceCheese p-1 mt-2">
-                        <h3 class="fw-normal mb-1 text-white text-center p-1">Sauces</h3>
-                    </div>
-                </div>
-
-                <ul class="text-center">
-                    <li class="text-muted p-1">Mayonnaise</li>
-                    <li class="text-muted p-1">Ketchup</li>
-                    <li class="text-muted p-1">Moutarde</li>
-                    <li class="text-muted p-1">Barbecue</li>
-                    <li class="text-muted p-1">Moutarde à l'ancienne</li>
-                    <li class="text-muted p-1">Algérienne</li>
-                    <li class="text-muted p-1">Américaine</li>
-                    <li class="text-muted p-1">Tartare</li>
-                </ul>
-            </div>
-
         </div>
-
-        {#    -----------------------------------------------Responsive-------------------------------------- -#}
-
-
-
-
-        {#            {{ form_start(form) }} #}
-
-        {#            <div class="alignementTacosConfigSize"> #}
-        {#                <div class="tailleTacos"> #}
-        {#                    <img src="{{ asset('build/images/tacosSize.png') }}" alt="tacos" class="imageSauceForm"> #}
-        {#                    <div class="sizeContainer"> #}
-        {#                        <h3>Tailles</h3> #}
-        {#                        <ul> #}
-        {#                            <li>L</li> #}
-        {#                            <li>XL</li> #}
-        {#                            <li>XXL</li> #}
-        {#                        </ul> #}
-        {#                    </div> #}
-        {#                    #}{#                    {{ form_row(form.size) }} #}
-        {#                </div> #}
-        {#                <div class="viandeTacos"> #}
-        {#                    <img src="{{ asset('build/images/tacosMeat.png') }}" alt="tacos" class="imageSauceForm"> #}
-        {#                    <div class="sizeContainer"> #}
-        {#                        <h3>Viandes</h3> #}
-        {#                       <ul> #}
-        {#                           <li>Boeuf</li> #}
-        {#                           <li>Poulet</li> #}
-        {#                           <li>Végétarien</li> #}
-        {#                       </ul> #}
-        {#                    </div> #}
-        {#                    #}{#                    {{ form_row(form.meat) }} #}
-        {#                </div> #}
-        {#            </div> #}
-
-        {#            <div class="alignementTacosConfigSauce"> #}
-        {#                <div class="sauceTacos"> #}
-        {#                    <img src="{{ asset('build/images/sauceTacos.png') }}" alt="tacos" class="imageSauceForm"> #}
-        {#                    <div class="sizeContainer"> #}
-        {#                        <h3>Sauces</h3> #}
-        {#                        <ul> #}
-        {#                            <li>Mayonnaise</li> #}
-        {#                            <li>Ketchup</li> #}
-        {#                            <li>Moutarde</li> #}
-        {#                            <li>Barbecue</li> #}
-        {#                            <li>Moutarde à l'ancienne</li> #}
-        {#                            <li>Algérienne</li> #}
-        {#                            <li>Américaine</li> #}
-        {#                            <li>Tartare</li> #}
-        {#                        </ul> #}
-        {#                    </div> #}
-        {#                    #}{#                    {{ form_row(form.sauce) }} #}
-        {#                </div> #}
-        {#                <div class="fromageTacos"> #}
-        {#                    <img src="{{ asset('build/images/cheeseTacosConfig.png') }}" alt="tacos" class="imageSauceForm"> #}
-        {#                    <div class="sizeContainer"> #}
-        {#                        <h3>Fromages</h3> #}
-        {#                        <ul> #}
-        {#                            <li>Cheddar</li> #}
-        {#                            <li>Emmental</li> #}
-        {#                            <li>Bleu d'Auvergne</li> #}
-        {#                            <li>Chèvre</li> #}
-        {#                            <li>Reblochon</li> #}
-        {#                            <li>Raclette</li> #}
-        {#                            <li>Cantal</li> #}
-        {#                        </ul> #}
-        {#                    </div> #}
-        {#                    #}{#                    {{ form_row(form.cheese) }} #}
-        {#                </div> #}
-        {#            </div> #}
-        {#        </div> #}
-
-        {#        #}{#- -----------Si connecté et pas USER----------- -#}
-        {#        {% if app.user != null %} #}
-        {#            <div class="blocFormBtnTacos"> #}
-        {#            <button type="submit" class="btnTacosLogin"> #}
-        {#                <i class="iconConnectTacos fa-solid fa-cart-plus"></i> #}
-        {#                Ajouter au Panier #}
-        {#            </button> #}
-
-        {#            #}{#- -----------Si connecté et ADMIN--------------- -#}
-        {#            {% if is_granted("ROLE_ADMIN") %} #}
-        {#                <a class="btnTacosCreate" href="{{ path('app_tacos_new') }}"> #}
-        {#                    <i class="fa-solid fa-cart-plus"></i> #}
-        {#                    Nouveaux Ingrédients #}
-        {#                </a> #}
-        {#                </div> #}
-        {#                #}{#                <a class="btnModifierCart" href="{{ path('app_tacos_index') }}">Modifier/Supprimer</a> #}
-        {#            {% endif %} #}
-
-        {#        {% endif %} #}
-
-        {#        #}{#- -----------Si connecté et USER--------------- -#}
-        {#        {% if app.user == null %} #}
-        {#            <div class="blocFormBtnTacos"> #}
-        {#                <a class="btnTacosCreate" href="{{ path('app_login') }}"> #}
-        {#                    <i class="iconConnectTacos fa-solid fa-person-chalkboard"></i> #}
-        {#                    Créer un compte #}
-        {#                </a> #}
-        {#                <a class="btnTacosLogin" href="{{ path('app_login') }}"> #}
-        {#                    <i class="iconConnectTacos fa-solid fa-key"></i> #}
-        {#                    Se connecter #}
-        {#                </a> #}
-        {#            </div> #}
-        {#        {% endif %} #}
-        {#        {{ form_end(form) }} #}
-
     </div>
+    {#    -----------------------------------------------Responsive-------------------------------------- -#}
+
+
+
+
+    {#            {{ form_start(form) }} #}
+
+    {#            <div class="alignementTacosConfigSize"> #}
+    {#                <div class="tailleTacos"> #}
+    {#                    <img src="{{ asset('build/images/tacosSize.png') }}" alt="tacos" class="imageSauceForm"> #}
+    {#                    <div class="sizeContainer"> #}
+    {#                        <h3>Tailles</h3> #}
+    {#                        <ul> #}
+    {#                            <li>L</li> #}
+    {#                            <li>XL</li> #}
+    {#                            <li>XXL</li> #}
+    {#                        </ul> #}
+    {#                    </div> #}
+    {#                    #}{#                    {{ form_row(form.size) }} #}
+    {#                </div> #}
+    {#                <div class="viandeTacos"> #}
+    {#                    <img src="{{ asset('build/images/tacosMeat.png') }}" alt="tacos" class="imageSauceForm"> #}
+    {#                    <div class="sizeContainer"> #}
+    {#                        <h3>Viandes</h3> #}
+    {#                       <ul> #}
+    {#                           <li>Boeuf</li> #}
+    {#                           <li>Poulet</li> #}
+    {#                           <li>Végétarien</li> #}
+    {#                       </ul> #}
+    {#                    </div> #}
+    {#                    #}{#                    {{ form_row(form.meat) }} #}
+    {#                </div> #}
+    {#            </div> #}
+
+    {#            <div class="alignementTacosConfigSauce"> #}
+    {#                <div class="sauceTacos"> #}
+    {#                    <img src="{{ asset('build/images/sauceTacos.png') }}" alt="tacos" class="imageSauceForm"> #}
+    {#                    <div class="sizeContainer"> #}
+    {#                        <h3>Sauces</h3> #}
+    {#                        <ul> #}
+    {#                            <li>Mayonnaise</li> #}
+    {#                            <li>Ketchup</li> #}
+    {#                            <li>Moutarde</li> #}
+    {#                            <li>Barbecue</li> #}
+    {#                            <li>Moutarde à l'ancienne</li> #}
+    {#                            <li>Algérienne</li> #}
+    {#                            <li>Américaine</li> #}
+    {#                            <li>Tartare</li> #}
+    {#                        </ul> #}
+    {#                    </div> #}
+    {#                    #}{#                    {{ form_row(form.sauce) }} #}
+    {#                </div> #}
+    {#                <div class="fromageTacos"> #}
+    {#                    <img src="{{ asset('build/images/cheeseTacosConfig.png') }}" alt="tacos" class="imageSauceForm"> #}
+    {#                    <div class="sizeContainer"> #}
+    {#                        <h3>Fromages</h3> #}
+    {#                        <ul> #}
+    {#                            <li>Cheddar</li> #}
+    {#                            <li>Emmental</li> #}
+    {#                            <li>Bleu d'Auvergne</li> #}
+    {#                            <li>Chèvre</li> #}
+    {#                            <li>Reblochon</li> #}
+    {#                            <li>Raclette</li> #}
+    {#                            <li>Cantal</li> #}
+    {#                        </ul> #}
+    {#                    </div> #}
+    {#                    #}{#                    {{ form_row(form.cheese) }} #}
+    {#                </div> #}
+    {#            </div> #}
+    {#        </div> #}
+
+    {#        #}{#- -----------Si connecté et pas USER----------- -#}
+    {#        {% if app.user != null %} #}
+    {#            <div class="blocFormBtnTacos"> #}
+    {#            <button type="submit" class="btnTacosLogin"> #}
+    {#                <i class="iconConnectTacos fa-solid fa-cart-plus"></i> #}
+    {#                Ajouter au Panier #}
+    {#            </button> #}
+
+    {#            #}{#- -----------Si connecté et ADMIN--------------- -#}
+    {#            {% if is_granted("ROLE_ADMIN") %} #}
+    {#                <a class="btnTacosCreate" href="{{ path('app_tacos_new') }}"> #}
+    {#                    <i class="fa-solid fa-cart-plus"></i> #}
+    {#                    Nouveaux Ingrédients #}
+    {#                </a> #}
+    {#                </div> #}
+    {#                #}{#                <a class="btnModifierCart" href="{{ path('app_tacos_index') }}">Modifier/Supprimer</a> #}
+    {#            {% endif %} #}
+
+    {#        {% endif %} #}
+
+    {#        #}{#- -----------Si connecté et USER--------------- -#}
+    {#        {% if app.user == null %} #}
+    {#            <div class="blocFormBtnTacos"> #}
+    {#                <a class="btnTacosCreate" href="{{ path('app_login') }}"> #}
+    {#                    <i class="iconConnectTacos fa-solid fa-person-chalkboard"></i> #}
+    {#                    Créer un compte #}
+    {#                </a> #}
+    {#                <a class="btnTacosLogin" href="{{ path('app_login') }}"> #}
+    {#                    <i class="iconConnectTacos fa-solid fa-key"></i> #}
+    {#                    Se connecter #}
+    {#                </a> #}
+    {#            </div> #}
+    {#        {% endif %} #}
+    {#        {{ form_end(form) }} #}
+
+
 
 
     <div class="backgroundTacosConfigResponsive">
 
         <div class="compositionTacosResp">
 
-            <div class="tacosChoiceResp">
+            <div class="tacosChoiceSizeResp">
                 <img src="{{ asset('build/images/TacosL.png') }}" alt="tacos"
                      class="imageSauceFormTacos">
                 <h3 class="sizetitleResp text-white">L</h3>
@@ -269,7 +278,7 @@
                     <p class="text-white priceTacosSizeResp">7 €</p>
                 </div>
             </div>
-            <div class="tacosChoiceResp">
+            <div class="tacosChoiceSizeResp">
                 <img src="{{ asset('build/images/TacosXL.png') }}" alt="tacos"
                      class="imageSauceFormTacos">
                 <h3 class="sizetitleResp text-white">XL</h3>
@@ -277,8 +286,8 @@
                     <p class="text-white priceTacosSizeResp">8.5 €</p>
                 </div>
             </div>
-            <div class="tacosChoiceResp">
-                <img src="{{ asset('build/images/TacosXXXL.png') }}" alt="tacos"
+            <div class="tacosChoiceSizeResp">
+                <img src="{{ asset('build/images/TacosXXL.png') }}" alt="tacos"
                      class="imageSauceFormTacos">
                 <h3 class="sizetitleResp text-white">XXL</h3>
                 <div class="prixResp">
@@ -289,7 +298,7 @@
         </div>
 
         <div class="alignementBarreResp">
-            <div class="barreResp"></div>
+            <hr class="barreResp">
         </div>
 
 
@@ -315,7 +324,7 @@
                 <img src="{{ asset('build/images/CarotteResp.png') }}" alt="tacos"
                      class="imageSauceFormTacos">
                 <div class="descriptionTacosResp">
-                    <h3 class="text-white">Vegetarien</h3>
+                    <h3 class="text-white">Végétarien (-1.5€)</h3>
                     <p class="text-muted p-1">Galette de pomme de terre // ( Salade, Tomate, Oignon ) ou frites</p>
                 </div>
             </div>
@@ -323,18 +332,18 @@
         </div>
 
         <div class="alignementBarreResp">
-            <div class="barreResp"></div>
+            <hr class="barreResp">
         </div>
 
         <div class="compositionTacosResp">
 
-            <div class="tacosChoiceMeatResp">
+            <div class="tacosChoiceSauceCheeseResp">
                 <img src="{{ asset('build/images/sauceTacos.png') }}" alt="tacos"
                      class="imageSauceFormTacosResp">
                 <div class="descriptionTacosResp">
                     <h3 class="text-white">Sauces</h3>
                     <p class="text-muted p-1">Mayonnaise, Ketchup, Moutarde, Barbecue, Moutarde à l'ancienne,
-                        Algérienne, Américaine, Tartare
+                        Algérienne, Samouraï, Hamburger, Tartare
                     </p>
                 </div>
             </div>
@@ -342,22 +351,21 @@
         </div>
 
         <div class="alignementBarreResp">
-            <div class="barreResp"></div>
+            <hr class="barreResp">
         </div>
 
         <div class="compositionTacosResp">
 
-            <div class="tacosChoiceMeatResp">
+            <div class="tacosChoiceSauceCheeseResp">
                 <img src="{{ asset('build/images/cheeseTacosConfig.png') }}" alt="tacos"
                      class="imageCheeseFormTacosResp">
                 <div class="descriptionTacosResp">
                     <h3 class="text-white">Fromages</h3>
-                    <p class="text-muted p-1">Cheddar, Emmental, Bleu d'Auvergne, Chèvre, Reblochon, Raclette, Cantal
+                    <p class="text-muted p-1">Cheddar, Emmental, Bleu d'Auvergne, Saint-Nectaire, Chèvre, Reblochon, Raclette, Cantal
                     </p>
                 </div>
             </div>
 
         </div>
-
     </div>
 {% endblock %}

@@ -1,0 +1,28 @@
+.titreBurgerCentrage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .titreBurger {
+    font-family: "Comica Brush", sans-serif;
+    font-size: 10rem;
+    margin: 0;
+  }
+
+  .descriptionBurger{
+    width: 100%;
+    height: auto;
+    font-size: 2rem;
+  }
+
+}
+
+@media (max-width: 1100px) {
+
+  .descriptionBurger{
+    width: 100%;
+    height: auto;
+    font-size: xx-large;
+  }
+}

@@ -1,9 +1,25 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S89RFFE4RG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-S89RFFE4RG');
+    </script>
 
     <meta charset="UTF-8">
-    <title>{% block title %}Bienvenu!{% endblock %}</title>
+    <title>Au 34 Burger - Burgers et tacos faits maison à Saint-Rémy-sur-Durolle</title>
+    <meta name="description"
+          content="Au 34 Burger est votre nouveau restaurant fast-food à Saint-Rémy-sur-Durolle.
+          Nous proposons une large variété de délicieux burgers et tacos faits maison à partir de viandes françaises
+          de qualité et de fromages locaux d'Auvergne.
+          Nous offrons également une option végétarienne pour les hamburgers et les tacos.
+          Venez découvrir notre savoureuse cuisine et notre service de qualité.">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css"
           integrity="sha256-5veQuRbWaECuYxwap/IOE/DAwNxgm4ikX7nrgsqYp88=" crossorigin="anonymous">
     <link rel="icon"
@@ -14,7 +30,9 @@
 
     <link href="https://fonts.googleapis.com/css?family=PermanentMarker" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{ asset('/css/fonts.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+    {#    <link rel="stylesheet" href="{{ asset('/css/fonts.css') }}"> #}
 
     {% block stylesheets %}
         {{ encore_entry_link_tags('app') }}
@@ -73,6 +91,31 @@
 
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"
         integrity="sha256-7PzqE1MyWa/IV5vZumk1CVO6OQbaJE4ns7vmxuUP/7g=" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<script>
+    const swiper = new Swiper('.swiper', {
+
+        autoplay: {
+            delay: 2500 ,
+        },
+
+         loop: true,
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+    });
+</script>
 
 {% block javascripts %}
     {{ encore_entry_script_tags('app') }}

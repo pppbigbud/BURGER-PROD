@@ -143,9 +143,12 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/php-flasher/flasher" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/requirements-checker" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/apache-pack" />
+      <excludeFolder url="file://$MODULE_DIR$/var" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="@flasher/flasher" level="application" />
+    <orderEntry type="library" name="swiper" level="application" />
   </component>
 </module>

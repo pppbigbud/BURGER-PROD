@@ -1,29 +1,30 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}🥤 Drinks 🥤{% endblock %}
+{% block title %}🥤 Boissons 🥤{% endblock %}
 
 {% block main %}
-    <div class="container">
 
-    <div class="alignementBackground">
-    <div class="titreTacosAlignement">
-        <h1 class="titreTacos text-white">BOISSONS</h1>
-        <p class="descriptionTacos mt-2 mb-5 text-muted text-center">
+    <div class="titreDrinkCentrage">
+        <h1 class="titreDrink text-white">BOISSONS</h1>
+        <p class="descriptionDrink mt-2 mb-5 text-muted text-center w-75">
+
             Accompagnez votre repas avec notre sélection de <i class="fa-solid fa-martini-glass-citrus"></i>
             <strong class="text-white opacity-50"> boissons rafraîchissantes</strong> dans notre nouveau
-            fast-food à <i class="fa-solid fa-location-dot"></i><strong class="text-white opacity-50"> Saint-Remy sur Durolle</strong>.
+            fast-food à <i class="fa-solid fa-location-dot"></i><strong class="text-white opacity-50"> Saint-Remy sur
+                Durolle</strong>.
             Nous proposons une variété de boissons classiques comme le Coca-Cola,
             l'Orangina et bien d'autres, pour compléter votre repas avec une note de fraîcheur.
             <strong class="text-white opacity-50">Nous vous proposons
-            également nos fameuses frites maison</strong> pour une expérience gustative complète</p>
+                également nos fameuses frites maison</strong> pour une expérience gustative complète.</p>
+    </div>
 
+    <div class="container d-flex flex-column">
         <div class="row row-cols-1 row-cols-md-4 d-flex justify-content-center ">
             {% for drink in drinks %}
                 {% include('partials/_cardsDrink.html.twig') %}
             {% endfor %}
         </div>
     </div>
-
 
     <script>
         // Au chargement de la page je charge ma fonction
