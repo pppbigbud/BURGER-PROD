@@ -1,9 +1,8 @@
 ---
 deployment:
-#  branch: static
   tasks:
     - export DEPLOYPATH=/home/ycvn0392/public_html
-    - cd $DEPLOYPATH
-    - /bin/cp -R /home/ycvn0392/repositories/BURGER-PROD/* .
+#    - cd $DEPLOYPATH
+#    - /bin/cp -R /home/ycvn0392/repositories/BURGER-PROD/* .
     - /usr/bin/composer install --no-dev --optimize-autoloader
     - /usr/bin/php $DEPLOYPATH/bin/console cache:clear --env=prod
