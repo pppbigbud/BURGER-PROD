@@ -103,19 +103,19 @@
     </nav>
 </div>
 
-<script>
-    // Sélectionnez la div "testbarre"
-    const testbarre = document.querySelector('.testbarre');
+{#<script>#}
+{#    // Sélectionnez la div "testbarre"#}
+{#    const testbarre = document.querySelector('.testbarre');#}
 
-    // Ajoutez un événement de souris à l'élément HTML
-    document.addEventListener('mousemove', e => {
-// Calculez la position de la souris par rapport à la fenêtre
-        const x = e.clientX;
+{#    // Ajoutez un événement de souris à l'élément HTML#}
+{#    document.addEventListener('mousemove', e => {#}
+{#// Calculez la position de la souris par rapport à la fenêtre#}
+{#        const x = e.clientX;#}
 
-// Définissez la position de la div en utilisant la propriété "left" de CSS
-        testbarre.style.left = `${x}px`;
-    });
-</script>
+{#// Définissez la position de la div en utilisant la propriété "left" de CSS#}
+{#        testbarre.style.left = `${x}px`;#}
+{#    });#}
+{#</script>#}
 
 <script>
     const activePage = window.location.pathname
