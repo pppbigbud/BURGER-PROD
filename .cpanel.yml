@@ -1,6 +1,6 @@
 ---
 deployment:
-  branch: static
+#  branch: static
   tasks:
     - export DEPLOYPATH=/home/ycvn0392/public_html
     - cd $DEPLOYPATH
