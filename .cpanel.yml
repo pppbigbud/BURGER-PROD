@@ -3,7 +3,7 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/ycvn0392/public_html
     - /bin/cp -R * $DEPLOYPATH
-#    - cd $DEPLOYPATH
+    - cd $DEPLOYPATH
 #    - /bin/cp -R /home/ycvn0392/repositories/BURGER-PROD/* .
-#    - /usr/bin/composer install --no-dev --optimize-autoloader
-#    - /usr/bin/php $DEPLOYPATH/bin/console cache:clear --env=prod
+    - /opt/cpanel/composer/bin/composer install --no-dev --optimize-autoloader
+    - /usr/local/bin/php $DEPLOYPATH/bin/console cache:clear --env=prod
