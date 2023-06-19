@@ -5,5 +5,5 @@ deployment:
     - /bin/cp -R * $DEPLOYPATH
     - cd $DEPLOYPATH
 #    - /bin/cp -R /home/ycvn0392/repositories/BURGER-PROD/* .
-    - /opt/cpanel/composer install --no-dev --optimize-autoloader
-    - /usr/local/bin/php $DEPLOYPATH/bin/console cache:clear --env=prod
+    - /opt/cpanel/composer/bin/composer/composer install --no-dev --optimize-autoloader
+    - /usr/local/bin/php/php $DEPLOYPATH/bin/console cache:clear --env=prod
