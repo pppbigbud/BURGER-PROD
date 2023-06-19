@@ -39,16 +39,16 @@
   height: auto;
 
   .logoBlocDesktop {
-    width: 60%;
+    width: 85%;
     height: auto;
-    margin-top: 7vh;
+    margin-top: 12vh;
     transition: width 0.2s, height 0.2s, transform 0.2s;
   }
 
   .miniSize {
-    width: 50%;
+    width: 55%;
     height: auto;
-    margin-top: 7vh;
+    margin-top: 4vh;
     transition: width 0.2s, height 0.2s, transform 0.2s;
   }
 }
@@ -97,12 +97,12 @@
 
 
 
-  .miniSize {
-    width: 8vw;
-    height: auto;
-    margin-bottom: 3vh;
-    transition: width 0.2s, height 0.2s, transform 0.2s;
-  }
+  //.miniSize {
+  //  width: 8vw;
+  //  height: auto;
+  //  margin-bottom: 3vh;
+  //  transition: width 0.2s, height 0.2s, transform 0.2s;
+  //}
 
   .iconHeader {
     width: 20%;

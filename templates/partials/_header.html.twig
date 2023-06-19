@@ -23,17 +23,17 @@
 
             {% if app.request.requestUri == '/drink/' %}
                 <a href="https://34burger.fr/" class="LogoMarqueHeader mt-2 mb-2"><img class="logoBlocDesktop" id="blocLogo"
-                                                                             src="{{ asset('build/images/frittesPanier.png') }}"
+                                                                             src="{{ asset('build/images/34burgerPanier.png') }}"
                                                                              alt="Logo 34 Burger">
                 </a>
             {% elseif app.request.requestUri == '/tacos/' %}
                 <a href="https://34burger.fr/" class="LogoMarqueHeader"><img class="logoBlocDesktop" id="blocLogo"
-                                                                             src="{{ asset('build/images/tacosPanier.png') }}"
+                                                                             src="{{ asset('build/images/34burgerPanier.png') }}"
                                                                              alt="Logo 34 Burger">
                 </a>
             {% else %}
                 <a href="https://34burger.fr/" class="LogoMarqueHeader"><img class="logoBlocDesktop" id="blocLogo"
-                                                                             src="{{ asset('build/images/burgerPanier.png') }}"
+                                                                             src="{{ asset('build/images/34burgerPanier.png') }}"
                                                                              alt="Logo 34 Burger">
                 </a>
             {% endif %}
@@ -71,22 +71,22 @@
                 </a></li>
 
             <li><a href="{{ path('app_tacos_index') }}" class="btnMenu">
-                    <img class="logoBlocResp" src="{{ asset('build/images/tacosPanier.png') }}" alt="">
+                    <img class="logoBlocResp testImgHeader" src="{{ asset('build/images/tacosPanier.png') }}" alt="">
                 </a></li>
 
             <div class="logoResp">
 
                 {% if app.request.requestUri == '/drink/' %}
                     <a href="https://34burger.fr/"><img class="logoBlocResp" id="blocLogo"
-                                                        src="{{ asset('build/images/frittesPanier.png') }}"
+                                                        src="{{ asset('build/images/34burgerPanier.png') }}"
                                                         alt="Logo 34 Burger"></a>
                 {% elseif app.request.requestUri == '/tacos/' %}
                     <a href="https://34burger.fr/"><img class="logoBlocResp" id="blocLogo"
-                                                        src="{{ asset('build/images/tacosPanier.png') }}"
+                                                        src="{{ asset('build/images/34burgerPanier.png') }}"
                                                         alt="Logo 34 Burger"></a>
                 {% else %}
                     <a href="https://34burger.fr/"><img class="logoBlocResp" id="blocLogo"
-                                                        src="{{ asset('build/images/burgerPanier.png') }}"
+                                                        src="{{ asset('build/images/34burgerPanier.png') }}"
                                                         alt="Logo 34 Burger"></a>
                 {% endif %}
 
@@ -211,4 +211,26 @@
             logo.classList.remove('miniSize')
         }
     })
+</script>
+
+<script defer>
+    // Récupération de l'URL actuelle de la page
+    const currentUrl = window.location.href;
+
+    // Sélection de tous les liens dans notre menu
+    const menuLinks = document.querySelectorAll('.menuRespBloc .menuResp li a');
+
+    // Fonction pour ajouter la classe "active" avec un délai
+    function addActiveClassWithDelay(link) {
+        setTimeout(() => {
+            link.parentElement.classList.add('active');
+        }, 1000); // Délai de 1000 millisecondes (1 seconde)
+    }
+
+    // Pour chaque lien, on va vérifier s'il correspond à l'URL actuelle et ajouter la classe "active" avec délai
+    menuLinks.forEach(link => {
+        if (link.href === currentUrl) {
+            addActiveClassWithDelay(link);
+        }
+    });
 </script>

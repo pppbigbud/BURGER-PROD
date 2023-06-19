@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-top: 10vh;
 
   .titreContact {
     font-family: "Comica Brush", sans-serif;
@@ -97,7 +98,8 @@
 
       .alignContactTelEmail {
         flex-direction: column;
-        margin-top: 5vh;
+        margin-top: 2vh;
+        margin-left: 0;
 
         .telContact {
           font-family: "Hey August", serif;
