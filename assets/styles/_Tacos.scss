@@ -57,7 +57,7 @@
   }
 }
 
-.tacosDescriptionTxt{
+.tacosDescriptionTxt {
   font-size: large;
   font-weight: lighter;
 }
@@ -113,6 +113,12 @@
         img {
           margin-left: -3vw;
           width: 18%;
+          height: auto;
+        }
+
+        .tacosXXL {
+          margin-left: -3vw;
+          width: 25%;
           height: auto;
         }
 
